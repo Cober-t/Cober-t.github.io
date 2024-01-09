@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react'
 import { Suspense } from 'react';
-import { ModelLoader } from "../../constants";
+// import { ModelLoader } from "../../constants";
 import * as THREE from 'three'
 import { Preload } from '@react-three/drei'
 import { Canvas } from "@react-three/fiber";

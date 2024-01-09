@@ -1,9 +1,10 @@
 import { Leva } from 'leva'       
-import React, { Suspense } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { AnimatePresence } from 'framer-motion'
 import { SectionWrapper } from '../hoc';
 import '../style.css'
+import { motion } from 'framer-motion'
 import { art3dDictPath, illustrationDictPath, musicDictPath, otherDictPath, videogameDictPath } from '../constants';
 
 // const Home = React.lazy(() => import('./Home'));
@@ -15,35 +16,24 @@ import { art3dDictPath, illustrationDictPath, musicDictPath, otherDictPath, vide
 
 import {Home, Illustration, Music, Other, Videogames, Art3D} from "./index"
 
-const Transition = () => {
-
-    return (
-        <>
-            <motion.div
-                className="slide-in"
-                initial={{ scaleY: 1 }}
-                animate={{ scaleY: 0 }}
-                exit={{ scaleY: 0 }}
-                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            /> 
-            <motion.div
-                className="slide-out"
-                initial={{ scaleY: 1 }}
-                animate={{ scaleY: 0 }}
-                exit={{ scaleY: 0 }}
-                transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-            />
-        </>
-    )
-}
-
 
 function HomeWrapper(Component) {
 
+    const [opacityBackground, setOpacityBackground] = useState("opacity-100")
+    
     return (
-        // <Suspense fallback={<Transition/>}>
+        <>
+            <div className={`w-full h-full bg-black-100 fixed top-0 left-0 z-20 ${opacityBackground}`}/>
+            <motion.div
+                key="slide-out"
+                className="w-full h-full bg-black-100 fixed top-0 left-0 origin-bottom z-20"
+                initial={{ scaleY: 1 }}
+                animate={{ scaleY: 0 }}
+                onAnimationStart={()=> setOpacityBackground("hidden")}
+                transition={{ duration: 1, ease: 'easeIn' }}
+                />
             <Component/>
-        // </Suspense>
+        </>
     )
 }
 

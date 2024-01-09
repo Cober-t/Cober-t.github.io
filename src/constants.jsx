@@ -1,15 +1,15 @@
 import { useMatch, useResolvedPath, Link } from 'react-router-dom';
 import { useProgress } from '@react-three/drei';
-
+import { motion } from 'framer-motion'
 
 export function CustomLink({ to, uniqueKey, children, ...props }) {
     
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-    
+
     return (
         <li key={uniqueKey} className={isActive ? "active list-none" : "list-none"}>
-            <Link to={to} {...props} onClick={window.scroll(0, 0)}>
+            <Link to={to} {...props} delay={5000} onClick={() => { window.scrollTo(0, 0) }}>
                 {children}
             </Link>
         </li>
@@ -56,36 +56,36 @@ export const navLinks = [
     },
 ];
 
-function ModelLoader() {
-    const { active, progress, errors, item, loaded, total } = useProgress()
+// function ModelLoader() {
+//     const { active, progress, errors, item, loaded, total } = useProgress()
 
-    const reference = useRef()
+//     const reference = useRef()
 
-    if(loadingBarElement != null && reference != undefined)
-    {
-        if(loaded)
-        {
-            window.setTimeout(() => {
-                gsap.to(
-                    reference.material.opacity, 
-                    { duration: 3 , value: 0, delay: 1 })   
-                // Update loadingBarElement
-                loadingBarElement.classList.add('ended')
-                loadingBarElement.style.transform = ''  
-            }, 500)
-        }
-        if (progress)
-            loadingBarElement.style.transform = `scaleX(${progress})`
-    }
+//     if(loadingBarElement != null && reference != undefined)
+//     {
+//         if(loaded)
+//         {
+//             window.setTimeout(() => {
+//                 gsap.to(
+//                     reference.material.opacity, 
+//                     { duration: 3 , value: 0, delay: 1 })   
+//                 // Update loadingBarElement
+//                 loadingBarElement.classList.add('ended')
+//                 loadingBarElement.style.transform = ''  
+//             }, 500)
+//         }
+//         if (progress)
+//             loadingBarElement.style.transform = `scaleX(${progress})`
+//     }
 
-    return <>
-        <mesh position={[0, 0, 0]} scale={[2, 3, 2]} rotation-x={Math.PI*0.5} rotation-z={Math.PI*0.5} rotation-y={-Math.PI/1.5}>
-            <planeBufferGeometry attach="geometry" args={[25, 15]} />
-            <meshBasicMaterial attach="material" color="black" transparent={true} />
-        </mesh>
-    </>
-    // return <Html center>{progress} % loaded</Html>
-}
+//     return <>
+//         <mesh position={[0, 0, 0]} scale={[2, 3, 2]} rotation-x={Math.PI*0.5} rotation-z={Math.PI*0.5} rotation-y={-Math.PI/1.5}>
+//             <planeBufferGeometry attach="geometry" args={[25, 15]} />
+//             <meshBasicMaterial attach="material" color="black" transparent={true} />
+//         </mesh>
+//     </>
+//     // return <Html center>{progress} % loaded</Html>
+// }
 
 // # CONSTANTS
 export const animationFilter = "animation"
@@ -129,6 +129,4 @@ export {
     otherDictPath,
     illustrationDictPath,
     art3dDictPath,
-
-    ModelLoader
 }
