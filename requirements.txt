@@ -1,0 +1,21 @@
+npm create vite@latest ./ -- --template react
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+npm install --legacy-peer-deps maath react-parallax-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-dom
+npm install --save-dev tailwind-scrollbar
+npm install --legacy-peer-deps eslint-plugin-react-hooks
+npm install --legacy-peer-deps react-player
+npm install r3f-perf (monitoring)
+npm install react-query
+
+
+#       MILESTONES
+# =======================
+[ ] Basic Structure
+[ ] Go through the website with scroll and prefabs
+[ ] Responsive Design
+[ ] Upload SVG Animations
+[ ] Make Animationss for the website
+[ ] Domain
