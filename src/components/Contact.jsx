@@ -56,9 +56,11 @@ const Contact = () => {
 
 	return (
 
-		<div className={`${styles.paddingX} ${styles.paddingY} xl:mt-12 flex flex-col gap-10 overflow-hidden`}>
+		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-screen overflow-hidden`}>
 
-			<h3 className={`${styles.sectionHeadText} mt-[150px] font-homeSections font-regular flex flex-col items-center`}>SUBSCRIBE TO STAY TUNE</h3>
+			<h3 className={`${styles.sectionHeadText} mt-[50px] font-homeSections font-regular flex flex-col items-center`}>
+				CONTACT ME!
+			</h3>
 
 			<form
 				ref={formRef}

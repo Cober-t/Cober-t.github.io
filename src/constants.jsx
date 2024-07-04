@@ -28,9 +28,9 @@ export const toolsContentBranchesPath = [
 
 
 // # ICONS
-import logo from "../public/assets/icons/logo.svg";
+import logo from "./assets/icons/logo.svg";
 
-const toolsDict = "/assets/tools.json"
+const toolsDict = "src/assets/tools.json"
 
 export {
     logo,

@@ -8,11 +8,12 @@ const Home = () => {
 
 		<section className="relative z-0 bg-backgroundColor select-none">
 
-			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center
+			overflow-scroll no-scrollbar">
 				<Hero />
 			</div>
 
-			<div>
+			{/* <div>
 				{toolsContentBranchesPath.map((link) => (
 					<ChangeBranch to={`${link.id}`} key={link.id + "Home"} className={`${link.style}`}>
 						{link.title}
@@ -22,7 +23,7 @@ const Home = () => {
 			</div>
 
 
-			<div className='py-[100px]'/>
+			<div className='py-[100px]'/> */}
 
 			<div className="relative z-0 bg-contactColor">
 				<Contact />

@@ -10,6 +10,10 @@
 	display:none;
 }
 
+.text-stroke {
+	-webkit-text-stroke: 5px rgba(193, 78, 47, 1);
+}
+
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
 	-ms-overflow-style: none;
