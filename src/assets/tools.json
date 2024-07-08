@@ -2,58 +2,76 @@
     "MY GAME ENGINE":
     {
         "splashImage": "./myGameEngine/parallaxImage.png",
-        "commitsMainBranch": 
-        {
-            "firstCheckpoint": 
+        "commits": 
+        [
             {
                 "name": "first checkpoint",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg"
-            }
-        },
-        "commitsDevBranch": 
-        {
-            "firstCheckpoint": 
-            {
-                "name": "first checkpoint",
-                "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg"
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
             },
-            "secondCheckpoint": 
             {
-                "name": "second checkpoint",
+                "name": "first checkpoint",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg"
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": true
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": true
             }
-        }
+        ]
     },
 
-    "Unity":
+    "UNITY":
     {
         "splashImage": "./unity/parallaxImage.jpg",
-        "commitsMainBranch": 
-        {
-            "firstCheckpoint": 
+        "commits": 
+        [
             {
                 "name": "first checkpoint",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg"
-            }
-        },
-        "commitsDevBranch": 
-        {
-            "firstCheckpoint": 
-            {
-                "name": "first checkpoint",
-                "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg"
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
             },
-            "secondCheckpoint": 
             {
-                "name": "second checkpoint",
+                "name": "first checkpoint",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg"
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": true
             }
-        }
+        ]
     }
 }
