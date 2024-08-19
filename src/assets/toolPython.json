@@ -1,0 +1,27 @@
+{
+    "PYTHON":
+    {
+        "splashImage": "./unity/parallaxImage.jpg",
+        "commits": 
+        [
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/ption/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGiption/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": false
+            },
+            {
+                "name": "first checkpoint",
+                "description": "./myGameEngine/descriptiost.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "main": true
+            }
+        ]
+    }
+}

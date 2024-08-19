@@ -1,51 +1,28 @@
-import React, { useState } from 'react';
-import { AnimatePresence } from 'framer-motion'
+import React from 'react';
+import Contact from "./Contact.jsx"
+import ToolBranch from './ToolBranch.jsx';
+import { pathGameEngine, pathUnity, pathPython } from "../constants.jsx"
 import '../style.css'
-import { motion } from 'framer-motion'
-import { Home } from './';
 
+import { Routes, Route } from "react-router-dom"
 
-function HomeWrapper(Component) {
-
-    const [opacityBackground, setOpacityBackground] = useState("opacity-100")
-    
-    return (
-        <>
-            <div className={`w-full h-full bg-black-100 fixed top-0 left-0 z-20 ${opacityBackground}`}/>
-            <motion.div
-                key="slide-out"
-                className="w-full h-full bg-black-100 fixed top-0 left-0 origin-bottom z-20"
-                initial={{ scaleY: 1 }}
-                animate={{ scaleY: 0 }}
-                onAnimationStart={()=> setOpacityBackground("hidden")}
-                transition={{ duration: 1, ease: 'easeIn' }}
-                />
-            <Component/>
-        </>
-    )
-}
-
-
-function App() {
-
-    const [opacityBackground, setOpacityBackground] = useState("opacity-100")
+export default function App() {
 
     return (
-        // <AnimatePresence id="home" mode="wait">
-        <>
-            <div className={`w-full h-full bg-black-100 fixed top-0 left-0 z-20 ${opacityBackground}`}/>
-            <motion.div
-                key="slide-out"
-                className="w-full h-full bg-black-100 fixed top-0 left-0 origin-bottom z-20"
-                initial={{ scaleY: 1 }}
-                animate={{ scaleY: 0 }}
-                onAnimationStart={()=> setOpacityBackground("hidden")}
-                transition={{ duration: 1, ease: 'easeIn' }}
-                />
-            <Home/>
-        </>
-        // </AnimatePresence>
+        <div>
+            <Routes>
+                <Route path="/" exact element={
+                    <ToolBranch path={pathGameEngine}/>
+                }/>
+                <Route path="/python" exact element={
+                    <ToolBranch path={pathPython}/>
+                } />
+                <Route path="/unity" exact element={
+                    <ToolBranch path={pathUnity}/>
+                } />
+            </Routes>
+
+            <Contact />
+        </div>
     )
 }
-
-export default App

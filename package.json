@@ -12,13 +12,16 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "framer-motion": "^10.16.16",
+    "install": "^0.13.0",
     "maath": "^0.10.7",
+    "npm": "^10.8.2",
     "r3f-perf": "^7.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.3.1",
     "react-parallax-tilt": "^1.7.179",
     "react-player": "^2.14.1",
     "react-query": "^3.39.3",
+    "react-router-dom": "^6.26.1",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.157.0"
   },

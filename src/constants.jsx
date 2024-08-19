@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 
 export function ChangeBranch({ to, uniqueKey, children, ...props }) {
     
@@ -25,14 +24,18 @@ export const toolsContentBranchesPath = [
 
 // # CONSTANTS
 // export const animationFilter = "animation"
+const pathGameEngine = "src/assets/toolGameEngine.json"
+const pathPython = "src/assets/toolPython.json"
+const pathUnity = "src/assets/toolUnity.json"
 
 
 // # ICONS
 import logo from "./assets/icons/logo.svg";
 
-const toolsDict = "src/assets/tools.json"
 
 export {
     logo,
-    toolsDict,
+    pathGameEngine,
+    pathPython,
+    pathUnity
 }
