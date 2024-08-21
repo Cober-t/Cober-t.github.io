@@ -6,7 +6,7 @@
         [
             {
                 "name": "first checkpoint",
-                "description": "./myGameEngine/description/test.txt",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "main": true
             },

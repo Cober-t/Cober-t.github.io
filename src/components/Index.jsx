@@ -1,11 +1,11 @@
 import { styles } from "../styles"
 
-export default function ToolIndex(props) {
+export default function Index({ commits }) {
 
     return (
 		<div className='fixed z-10 top-1/2 left-1/2 -translate-x-[53%] translate-y-1/2
         flex flex-col w-full items-end justify-end text-[14px] gap-4 uppercase font-titleSections font-semibold'>
-        {props.items && props.items[1].commits.map(function(commit, index)
+        {commits.map(function(commit, index)
         {
             if (commit.main)
             {
