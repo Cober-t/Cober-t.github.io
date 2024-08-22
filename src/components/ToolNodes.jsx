@@ -13,13 +13,34 @@ export default function ToolNodes({ commits }) {
 
     return (
         <>
-            { nodeRefs &&  <Index commits={commits} refs={nodeRefs}/>}
+            {
+                nodeRefs && 
+                <Index commits={commits} refs={nodeRefs}/>
+            }
 
             <div className='relative z-20 flex flex-col items-center justify-end select-none'>
             {
                 commits.map((commit, index) =>
                     <div ref={nodeRefs[index]}
                         className='flex flex-col items-center justify-center whitespace-pre-line w-full h-screen text-[92px] uppercase'>
+                        {/* BACKGROUND IMAGE */}
+                        <div style={{
+                            '--image-url': `url(${commit.backgroundImage})`,
+                            zIndex:"-3",
+                        }}
+                        className={`absolute bg-[image:var(--image-url)] flex flex-row h-screen w-full
+                            bg-center bg-cover bg-no-repeat`}>
+                        </div>
+
+                        <div style={{
+                            position: "absolute",
+                            height: "100vh",
+                            width: "100vw",
+                            backgroundColor: "#000000",
+                            zIndex: "-2",
+                            opacity: "0.5"
+                        }}>
+                        </div>
                         <p className={`flex flex-row items-center justify-center w-full mr-[-100px] mb-[50px]`}>
                             {commit.name}
                         </p>
@@ -30,6 +51,8 @@ export default function ToolNodes({ commits }) {
                                 {commit.description}
                             </p>
                         </div>
+
+
                     </div>
                 )
             }

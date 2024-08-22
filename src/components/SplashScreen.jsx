@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react"
+import { useContext } from "react"
 import { Link } from "react-router-dom";
 import '../style.css'
 import { ToolContext } from "./ToolBranch.jsx";
@@ -23,10 +23,10 @@ export default function SplashScreen({ splashImage, name }) {
 	<>
 		<div style={{'--image-url': `url(${splashImage})`}}
 		className='z-10 fixed h-screen w-full justify-center items-center
-		top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+		top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden'>
 		</div>
 
-		<div className='absolute z-10 flex flex-row h-screen w-full'>
+		<div className='absolute z-10 flex flex-row h-screen w-full overflow-hidden'>
 
 			<div className='flex flex-row h-screen w-full justify-center items-center'>
 				
@@ -36,7 +36,7 @@ export default function SplashScreen({ splashImage, name }) {
 					whitespace-pre-line text-transparent`}>
 
 					<p className='text-stroke tracking-tighter font-["Ignite"] justify-center text-center
-					h-screen leading-[280px] w-full flex flex-row items-center font-regular text-[350px]'>
+					h-screen leading-[280px] w-full flex flex-row items-center font-regular md:text-[350px] sm:text-[20rem] xs:text-[10rem]'>
 						{`${name}`}
 					</p>
 				</div>
@@ -48,12 +48,12 @@ export default function SplashScreen({ splashImage, name }) {
 					whitespace-pre-line text-transparent`}>
 
 					<p className='tracking-tighter font-["Ignite"] justify-center h-screen text-center
-					leading-[280px] w-full flex flex-row items-center text-[350px]'>
+					leading-[280px] w-full flex flex-row items-center md:text-[350px] sm:text-[20rem] xs:text-[10rem]'>
 						{`${name}`}
 					</p>
 				</div>
 
-			</div>
+			</div>	
 
 			{/* NAV BAR */}
 			<div className={`absolute z-40 justify-center flex flex-row w-full h-screen items-end gap-5`}>
@@ -65,7 +65,7 @@ export default function SplashScreen({ splashImage, name }) {
 		</div>
 
 		{/* Tranparent background Image / Gif */}
-		<div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-row h-screen w-full'>
+		<div className='relative top-1/2 left-1/2 -translate-x-1/2 flex flex-row h-screen w-full'>
 
 			<div style={{'--image-url': `url(${splashImage})`}}
 			className={`absolute bg-[image:var(--image-url)] flex flex-row h-screen w-full

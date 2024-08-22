@@ -8,42 +8,49 @@
                 "name": "first checkpoint",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true
             },
             {
                 "name": "sixth checkpoint",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false
             },
             {
                 "name": "fifth checkpoint",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false
             },
             {
                 "name": "fourth checkpoint",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true
             },
             {
                 "name": "third checkpoint",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false
             },
             {
                 "name": "second checkpoint",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false
             },
             {
                 "name": "last checkpoint",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true
             }
         ]
