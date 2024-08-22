@@ -56,7 +56,7 @@ export default function SplashScreen({ splashImage, name }) {
 			</div>
 
 			{/* NAV BAR */}
-			<div className={`absolute justify-center flex flex-row w-full h-screen items-end gap-5`}>
+			<div className={`absolute z-40 justify-center flex flex-row w-full h-screen items-end gap-5`}>
 				<Link onClick={loadData} to="/" className={`${NavColor("/")} h-5 w-5 rounded-full mb-[50px]`}/>
 				<Link onClick={loadData} to="/unity" className={`${NavColor("/unity")} h-5 w-5 rounded-full mb-[50px]`}/>
 				<Link onClick={loadData} to="/python" className={`${NavColor("/python")} h-5 w-5 rounded-full mb-[50px]`}/>

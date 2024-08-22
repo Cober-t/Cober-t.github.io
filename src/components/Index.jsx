@@ -2,31 +2,29 @@ import { styles } from "../styles"
 
 export default function Index({ commits }) {
 
+    function Goto(index) {
+        console.log(index)
+    }
+
+    function IndexNodeStyle(isMain) {
+        return isMain === true ? styles.indexMainNode : styles.indexNode
+    }
+
+    function IndexNodeWidth(isMain) {
+        return isMain === true ? styles.indexMainNodeWidth : styles.indexNodeWidth
+    }
+
     return (
-		<div className='fixed z-10 top-1/2 left-1/2 -translate-x-[53%] translate-y-1/2
+		<div className='fixed z-30 top-1/2 left-1/2 -translate-x-[53%] translate-y-1/2
         flex flex-col w-full items-end justify-end text-[14px] gap-4 uppercase font-titleSections font-semibold'>
-        {commits.map(function(commit, index)
-        {
-            if (commit.main)
-            {
-                return (
-                    <div className='flex min-w-[250px] items-center justify-between font-regular'>
-                        {commit.name}
-                        <hr className='opacity-0 bg-transparent w-20'/>
-                        {index}
-                    </div>
-                )
-            }
-            else
-            {
-                return (
-                    <div className='flex max-w-[250px] items-center justify-end font-regular'>
-                        {commit.name}
-                        <hr className='opacity-0 bg-transparent w-10'/>
-                        {index}
-                    </div>
-                )
-            }
+        {commits.map(function(commit, index) {
+            return (
+                <p onClick={()=> {Goto(index)} } className={IndexNodeStyle(commit.main)}>
+                    {commit.name}
+                    <hr className={IndexNodeWidth(commit.main)}/>
+                    {index}
+                </p>
+            )
         })}
     </div>
     )

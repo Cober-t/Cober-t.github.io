@@ -41,7 +41,7 @@
                 "main": false
             },
             {
-                "name": "first checkpoint",
+                "name": "last checkpoint",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "main": true

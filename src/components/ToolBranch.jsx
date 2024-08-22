@@ -48,16 +48,18 @@ export default function ToolBranch({ path }) {
 	return ( data && data.items &&
 	<ToolContext.Provider value={{isLoaded, loadData}}>
 		<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center overflow-scroll no-scrollbar">
-			<div className='relative z-10 flex flex-col items-center justify-end'>
-				{data && data.items[1].commits.map((commit, index) =>
+
+			<Index commits={data.items[1].commits}/>
+
+			<div className='relative z-20 flex flex-col items-center justify-end select-none'>
+				{data && data.items[1].commits.map((commit) =>
 					<NodeCommit name={commit.name} 
 							description={commit.description}
-							animation={commit.animation} 
-							index={index}/>
+							animation={commit.animation}
+							main={commit.main}/>
 				)}
-				</div>
+			</div>
 			
-			<Index commits={data.items[1].commits}/>
 
 			<SplashScreen splashImage={data.items[1].splashImage} name={data.name}/>
 		</div>
