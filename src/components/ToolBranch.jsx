@@ -1,6 +1,5 @@
 import React, { useEffect, useState, createContext } from 'react';
-import NodeCommit from './NodeCommit.jsx';
-import Index from './Index.jsx';
+import ToolNodes from './ToolNodes.jsx';
 import SplashScreen from "./SplashScreen.jsx"
 
 export const ToolContext = createContext();
@@ -8,7 +7,7 @@ export const ToolContext = createContext();
 export default function ToolBranch({ path }) {
 
 	const [data, setData] = useState(
-		{ items: "", name: "", customStyle: "" }
+		{ items: "", name: "", commits:"", splashImage:"", customStyle: "" }
 	)
     const [isLoaded, setIsLoaded] = useState(false)
 
@@ -28,9 +27,11 @@ export default function ToolBranch({ path }) {
 			.then((finalData) =>
 			{
 				setIsLoaded(true)
-				setData({
+				setData({...data,
 					items: Object.entries(finalData)[0], 
-					name: data.items[0]
+					name: data.items[0],
+					commits: Object.entries(finalData)[0][1].commits,
+					splashImage: Object.entries(finalData)[0][1].splashImage,
 				})
 			})
 		}
@@ -42,26 +43,16 @@ export default function ToolBranch({ path }) {
 	useEffect(function()
 	{
 		fetchData()
-
 	},[isLoaded]);
 	
 	return ( data && data.items &&
 	<ToolContext.Provider value={{isLoaded, loadData}}>
 		<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center overflow-scroll no-scrollbar">
 
-			<Index commits={data.items[1].commits}/>
+			<ToolNodes commits={data.commits}/>
 
-			<div className='relative z-20 flex flex-col items-center justify-end select-none'>
-				{data && data.items[1].commits.map((commit) =>
-					<NodeCommit name={commit.name} 
-							description={commit.description}
-							animation={commit.animation}
-							main={commit.main}/>
-				)}
-			</div>
+			<SplashScreen splashImage={data.splashImage} name={data.name}/>
 			
-
-			<SplashScreen splashImage={data.items[1].splashImage} name={data.name}/>
 		</div>
 	</ToolContext.Provider>
 	)
