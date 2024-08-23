@@ -5,49 +5,196 @@
         "commits": 
         [
             {
-                "name": "first checkpoint",
+                "name": "Match 3",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true
             },
             {
-                "name": "sixth checkpoint",
-                "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
-                "backgroundImage": "./myGameEngine/parallaxImage.png",
-                "main": false
-            },
-            {
-                "name": "fifth checkpoint",
-                "description": "./myGameEngine/description/test.txt",
+                "name": "Sistema de animacion con transiciones (Tweens)(lerp)",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false
             },
             {
-                "name": "fourth checkpoint",
+                "name": "Generación de una mátriz donde las entidades limitan su comportamiento",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Selección de entidades a través de la pantalla",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Breakout",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": true
+            },
+            {
+                "name": "Carga de escenas (niveles)",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Sistema de particulas",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Atlas de texturas para optimizar",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Flappy Bird",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": true
+            },
+            {
+                "name": "Creación de prefabs para agilizar el prototipado en el Editor",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Reinicio de la escena dentro del juego",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Serialización y deserialización de los datos de una escena",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Renderizado de texto",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Renderizado de texturas",
+                "description": "./myGameEngine/\ndddddescription/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Pong",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true
             },
             {
-                "name": "third checkpoint",
-                "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
-                "backgroundImage": "./unity/parallaxImage.jpg",
-                "main": false
-            },
-            {
-                "name": "second checkpoint",
+                "name": "Camara de juego virtual",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false
             },
             {
-                "name": "last checkpoint",
+                "name": "Sistema de scripting nativo en C++",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
+                "main": false
+            },
+            {
+                "name": "Físicas 2D y Sistema de Eventos",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
+                "main": false
+            },
+            {
+                "name": "Sistema de audio",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
+                "main": false
+            },
+            {
+                "name": "Core",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": true
+            },
+            {
+                "name": "Launcher, para abrir y crear projectos",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Editor (ImGui)",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Sistema de entidades y componentes",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Implementación de una API para los gráficos (OpenGL)",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Inputs",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Sistema de log",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "Configuración del projecto (Cmake)",
+                "description": "./myGameEngine/description/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": false
+            },
+            {
+                "name": "First Commit (explicación)",
                 "description": "./myGameEngine/description/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",

@@ -21,7 +21,7 @@ export default function Index({ commits, refs }) {
     }
 
     return (
-		<div className='fixed z-30 top-1/2 left-1/2 -translate-x-[53%] translate-y-1/2
+		<div className='fixed z-40 top-1/2 left-1/2 -translate-x-[53%] translate-y-1/2
         flex flex-col w-full items-end justify-end text-[14px] gap-4 uppercase font-titleSections font-semibold'>
         {
             commits.map(function(commit, index) {

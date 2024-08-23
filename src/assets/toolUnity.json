@@ -5,21 +5,24 @@
         "commits": 
         [
             {
-                "name": "first checkpoint",
+                "name": "Sistema de dialogo",
                 "description": "./myGameEngine/ption/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
-                "main": false
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": true
             },
             {
-                "name": "first checkpoint",
-                "description": "./myGiption/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
-                "main": false
-            },
-            {
-                "name": "first checkpoint",
+                "name": "explicacion de detalles del generador de terreno...",
                 "description": "./myGameEngine/descriptiost.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
+                "main": false
+            },
+            {
+                "name": "Generador de terreno",
+                "description": "./myGiption/test.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true
             }
         ]

@@ -5,21 +5,31 @@
         "commits": 
         [
             {
-                "name": "first checkpoint",
+                "name": "Sincronización de Telegram con APIs de Todoist, Notion, Obsidian...",
                 "description": "./myGameEngine/ption/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
-                "main": false
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": true
             },
             {
-                "name": "first checkpoint",
+                "name": "Servidor para validar nomenclaturas de archivos",
                 "description": "./myGiption/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
-                "main": false
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
+                "main": true
             },
             {
-                "name": "first checkpoint",
+                "name": "Validador de condiciones para exportar modelos y animaciones en Maya",
                 "description": "./myGameEngine/descriptiost.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./unity/parallaxImage.jpg",
+                "main": true
+            },
+            {
+                "name": "Rigging automatico en Blender",
+                "description": "./myGameEngine/descriptiost.txt",
+                "animation": "./myGameEngine/animation/testAnimation.svg",
+                "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true
             }
         ]

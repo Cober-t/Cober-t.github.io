@@ -21,12 +21,7 @@ export default function SplashScreen({ splashImage, name }) {
 
 	return (
 	<>
-		<div style={{'--image-url': `url(${splashImage})`}}
-		className='z-10 fixed h-screen w-full justify-center items-center
-		top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden'>
-		</div>
-
-		<div className='absolute z-10 flex flex-row h-screen w-full overflow-hidden'>
+		<div className='absolute z-30 flex flex-row h-screen w-full overflow-hidden'>
 
 			<div className='flex flex-row h-screen w-full justify-center items-center'>
 				
@@ -65,12 +60,12 @@ export default function SplashScreen({ splashImage, name }) {
 		</div>
 
 		{/* Tranparent background Image / Gif */}
-		<div className='relative top-1/2 left-1/2 -translate-x-1/2 flex flex-row h-screen w-full'>
+		<div className='z-20 relative top-1/2 left-1/2 -translate-x-1/2 flex flex-row h-screen w-full'>
 
 			<div style={{'--image-url': `url(${splashImage})`}}
 			className={`absolute bg-[image:var(--image-url)] flex flex-row h-screen w-full
 				bg-center bg-cover bg-no-repeat`}>
-
+					
 				<div className='flex flex-row w-full h-screen bg-toolBGColor opacity-90'/>
 			</div>
 		</div>
