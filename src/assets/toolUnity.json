@@ -9,21 +9,24 @@
                 "description": "./myGameEngine/ption/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
-                "main": true
+                "main": true,
+                "index": "2"
             },
             {
-                "name": "explicacion de detalles del generador de terreno...",
+                "name": "explicacion de detalles",
                 "description": "./myGameEngine/descriptiost.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
-                "main": false
+                "main": false,
+                "index": "1.1"
             },
             {
                 "name": "Generador de terreno",
                 "description": "./myGiption/test.txt",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
-                "main": true
+                "main": true,
+                "index": "1"
             }
         ]
     }
