@@ -1,16 +1,19 @@
 import React from 'react';
-import Contact from "./Contact.jsx"
 import ToolBranch from './ToolBranch.jsx';
 import { pathGameEngine, pathUnity, pathPython } from "../constants.jsx"
 import '../style.css'
-
+import { useLocation } from 'react-router-dom';
 import { Routes, Route } from "react-router-dom"
+import { AnimatePresence } from 'framer-motion';
 
 export default function App() {
 
+    const location = useLocation()
+
     return (
-        <div>
-            <Routes>
+        <>
+        <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
                 <Route path="/" exact element={
                     <ToolBranch path={pathGameEngine}/>
                 }/>
@@ -21,8 +24,7 @@ export default function App() {
                     <ToolBranch path={pathUnity}/>
                 } />
             </Routes>
-
-            {/* <Contact /> */}
-        </div>
+        </AnimatePresence>
+        </>
     )
 }

@@ -36,9 +36,9 @@ export default function Index({ commits, refs }) {
     }
 
     return (
-        <div className='fixed z-40 flex flex-col w-full h-screen
-        uppercase font-titleSections font-semibold
-        items-end justify-end text-[14px] gap-4'>
+        <div className='fixed z-40 flex flex-col left-3/4 bottom-0 w-fit h-fit
+        uppercase font-titleSections font-semibold gap-y-4
+        items-end justify-end text-[14px]'>
         <div onMouseLeave={() => { setShowSubCommits(undefined)} }>
         {
             commits.map(function(commit, index) {

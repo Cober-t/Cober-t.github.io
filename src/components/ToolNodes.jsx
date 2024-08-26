@@ -1,7 +1,6 @@
-import { createRef, useContext, useEffect, useMemo, useRef } from "react"
+import { createRef, useMemo } from "react"
 import '../style.css'
 import Index from './Index.jsx';
-import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 function Node({ name, animation, description }) {
     return (
