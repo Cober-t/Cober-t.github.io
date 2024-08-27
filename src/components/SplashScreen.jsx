@@ -4,7 +4,7 @@ import '../style.css'
 import { ToolContext } from "./ToolBranch.jsx";
 
 
-export default function SplashScreen({ splashImage, name }) {
+export default function SplashScreen({ splashImage, name, reference }) {
 
 	const { loadData } = useContext(ToolContext)
 
@@ -22,7 +22,8 @@ export default function SplashScreen({ splashImage, name }) {
 	return (
 	<>
 
-		<div className='absolute z-30 overflow-hidden flex flex-row h-screen w-full justify-center items-center'>
+		<div className='absolute z-30 overflow-hidden flex flex-row h-screen w-full justify-center items-center'
+			ref={reference}>
 			
 			<div style={{'--image-url': `url(${splashImage})`}}
 			className={`bg-[image:var(--image-url)] flex flex-row h-screen w-full

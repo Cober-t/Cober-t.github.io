@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { styles } from "../styles"
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
-export default function Index({ commits, refs }) {
+export default function Index({ commits, refs, show }) {
 
     const [showSubCommits, setShowSubCommits] = useState(undefined)
+    const { scrollYProgress } = useScroll()
 
     function handleScroll(index) {
         if (refs[index] !== null) {
@@ -14,6 +16,12 @@ export default function Index({ commits, refs }) {
             });
         }
     }
+
+    useMotionValueEvent(scrollYProgress, "change", 
+    (latest) => {
+        // console.log(latest)
+    })
+    
 
     // function IndexNode({ name, main, index }, ...props) {
     //     return (
@@ -36,9 +44,12 @@ export default function Index({ commits, refs }) {
     }
 
     return (
-        <div className='fixed z-[90] flex flex-col left-3/4 bottom-0 w-fit h-fit
+        <motion.div className='fixed z-[90] flex flex-col left-full bottom-0 w-fit h-fit
         uppercase font-titleSections font-semibold gap-y-4
-        items-end justify-end text-[14px]'>
+        items-end justify-end text-[14px]'
+        animate={{
+            x: show ? "0%" : "-100%"
+        }}>
         <div onMouseLeave={() => { setShowSubCommits(undefined)} }>
         {
             commits.map(function(commit, index) {
@@ -46,28 +57,34 @@ export default function Index({ commits, refs }) {
                 <>
                     {
                     !commit.main && showSubCommits && showSubCommits === commit.index.substring(0, 1) &&
-                    <p onClick={()=> { handleScroll(index)} }
-                    className={IndexNodeStyle(false)}>
+                    <motion.div onClick={()=> { handleScroll(index)} }
+                    className={IndexNodeStyle(false)}
+                    animate={{
+                        y: showSubCommits ? "-100%" : "0%"
+                    }}>
                         {commit.name}
                         <hr className={IndexNodeWidth(commit.main)}/>
                         {index}
-                    </p>
+                    </motion.div>
                     }
 
                     {
                     commit.main &&
-                    <p onClick={()=> { handleScroll(index)} }
+                    <motion.div onClick={()=> { handleScroll(index)} }
                     className={IndexNodeStyle(true)}
-                    onMouseEnter={() => { setShowSubCommits(commit.index) } }>
+                    onMouseEnter={() => { setShowSubCommits(commit.index) } }
+                    animate={{
+                        y: showSubCommits ? "-50%" : "0%"
+                    }}>
                         {commit.name}
                         <hr className={IndexNodeWidth(commit.main)}/>
                         {index}
-                    </p>
+                    </motion.div>
                     }
                 </>
             )})
         }
         </div>
-        </div>
+        </motion.div>
     )
 }

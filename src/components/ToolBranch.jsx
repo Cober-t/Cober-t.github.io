@@ -1,9 +1,9 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { useEffect, useState, createRef, useMemo, createContext } from 'react';
 import ToolNodes from './ToolNodes.jsx';
 import SplashScreen from "./SplashScreen.jsx"
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 
-export const ToolContext = createContext();
+export const ToolContext = createContext(); 
 
 export default function ToolBranch({ path }) {
 
@@ -11,6 +11,10 @@ export default function ToolBranch({ path }) {
 		{ items: "", name: "", commits:"", splashImage:"", customStyle: "" }
 	)
     const [isLoaded, setIsLoaded] = useState(false)
+	const ref = useMemo(() => createRef())
+	const isInView = useInView(ref, {
+		amount: "some",
+	});
 
 	function loadData() { 
 		setIsLoaded(false) 
@@ -47,11 +51,12 @@ export default function ToolBranch({ path }) {
 			fetchData()
 
 		window.scrollTo({
-			top: document.body.offsetHeight,
+			top: document.body.scrollHeight,
 			behavior: 'instant',
 		})
 		
 	},[isLoaded]);
+
 
 	return (
 		<>
@@ -59,10 +64,9 @@ export default function ToolBranch({ path }) {
 		<ToolContext.Provider value={{isLoaded, loadData}}>
 
 			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center overflow-scroll no-scrollbar">
-
-				<ToolNodes commits={data.commits}/>
-
-				<SplashScreen splashImage={data.splashImage} name={data.name}/>
+				<ToolNodes commits={data.commits} indexShow={isInView}/>
+				<SplashScreen splashImage={data.splashImage} name={data.name}
+				 	reference={ref}/>
 			</div>
 
 		</ToolContext.Provider>

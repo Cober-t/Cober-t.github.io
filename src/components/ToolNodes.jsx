@@ -1,4 +1,4 @@
-import { createRef, useMemo } from "react"
+import { createRef, useEffect, useMemo } from "react"
 import '../style.css'
 import Index from './Index.jsx';
 
@@ -19,7 +19,7 @@ function Node({ name, animation, description }) {
     )
 }
 
-export default function ToolNodes({ commits }) {
+export default function ToolNodes({ commits, indexShow }) {
 
     const nodeRefs = useMemo(() =>
         Array(commits.length)
@@ -31,7 +31,7 @@ export default function ToolNodes({ commits }) {
         <>
             {
                 nodeRefs && 
-                <Index commits={commits} refs={nodeRefs}/>
+                <Index commits={commits} refs={nodeRefs} show={indexShow}/>
             }
 
             {/* Change background if isInView and
