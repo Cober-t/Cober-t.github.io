@@ -64,7 +64,7 @@ export default function SplashScreen({ splashImage, name, reference }) {
 			className={`absolute bg-[image:var(--image-url)] flex flex-row h-screen w-full
 				bg-center bg-cover bg-no-repeat`}>
 					
-				<div className='flex flex-row w-full h-screen bg-toolBGColor opacity-90'/>
+				<div className='flex flex-row w-full h-screen bg-toolBGColor opacity-85'/>
 			</div>
 		</div>
 	</>

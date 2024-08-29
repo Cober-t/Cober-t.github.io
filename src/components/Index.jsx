@@ -5,7 +5,6 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 export default function Index({ commits, refs, show }) {
 
     const [showSubCommits, setShowSubCommits] = useState(undefined)
-    const { scrollYProgress } = useScroll()
 
     function handleScroll(index) {
         if (refs[index] !== null) {
@@ -16,12 +15,6 @@ export default function Index({ commits, refs, show }) {
             });
         }
     }
-
-    useMotionValueEvent(scrollYProgress, "change", 
-    (latest) => {
-        // console.log(latest)
-    })
-    
 
     // function IndexNode({ name, main, index }, ...props) {
     //     return (
@@ -60,7 +53,7 @@ export default function Index({ commits, refs, show }) {
                     <motion.div onClick={()=> { handleScroll(index)} }
                     className={IndexNodeStyle(false)}
                     animate={{
-                        y: showSubCommits ? "-100%" : "0%"
+                        y: showSubCommits ? "0%" : "0%"
                     }}>
                         {commit.name}
                         <hr className={IndexNodeWidth(commit.main)}/>

@@ -32,11 +32,10 @@ export default function ToolBranch({ path }) {
 			.then((finalData) =>
 			{
 				setIsLoaded(true)
+				const dataDict = Object.entries(finalData)[0]
 				setData({...data,
-					items: Object.entries(finalData)[0], 
-					name: Object.entries(finalData)[0][0],
-					commits: Object.entries(finalData)[0][1].commits,
-					splashImage: Object.entries(finalData)[0][1].splashImage,
+					items: dataDict, name: dataDict[0],
+					commits: dataDict[1].commits, splashImage: dataDict[1].splashImage,
 				})
 			})
 		}
