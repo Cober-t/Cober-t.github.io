@@ -14,12 +14,12 @@ export default function App() {
         <>
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                <Route path="/" exact element={
+                {/* <Route path="/" exact element={
                     <ToolBranch path={pathGameEngine}/>
-                }/>
-                <Route path="/python" exact element={
+                }/> */}
+                {/* <Route path="/python" exact element={
                     <ToolBranch path={pathPython}/>
-                } />
+                } /> */}
                 <Route path="/unity" exact element={
                     <ToolBranch path={pathUnity}/>
                 } />

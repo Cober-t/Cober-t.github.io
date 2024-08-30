@@ -62,7 +62,7 @@ export default function ToolBranch({ path }) {
 		{ data && data.items &&
 		<ToolContext.Provider value={{isLoaded, loadData}}>
 
-			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center overflow-scroll no-scrollbar">
+			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center no-scrollbar">
 				<ToolNodes commits={data.commits} indexShow={isInView}/>
 				<SplashScreen splashImage={data.splashImage} name={data.name}
 				 	reference={ref}/>
