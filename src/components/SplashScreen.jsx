@@ -1,9 +1,12 @@
-import { useContext } from "react"
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import '../style.css'
+import { ToolContext } from "./ToolBranch";
 
 
 export default function SplashScreen({ splashImage, name, reference }) {
+
+	const { loadData } = useContext(ToolContext)
 
 	function NavColor(path) {
 		let color = "bg-white hover:bg-gray-700"

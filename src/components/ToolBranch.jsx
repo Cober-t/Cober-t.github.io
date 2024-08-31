@@ -1,23 +1,26 @@
 import React, { useEffect, useState, createRef, useMemo, createContext } from 'react';
-import ToolUnityNodes from './ToolUnityNodes.jsx'
 import ToolGameEngineNodes from './ToolGameEngineNodes.jsx'
-import ToolPythonNodess from './ToolPythonNodes.jsx'
+import ToolPythonNodes from './ToolPythonNodes.jsx'
+import ToolUnityNodes from './ToolUnityNodes.jsx'
 import SplashScreen from "./SplashScreen.jsx"
 import { motion, useInView } from "framer-motion"
-import { useLocation } from 'react-router-dom';
 
+export const ToolContext = createContext(); 
 
-export default function ToolGameEngine({ path }) {
-
-	const location = useLocation()
+export default function ToolBranch({ path }) {
 
 	const [data, setData] = useState(
 		{ items: "", name: "", commits:"", splashImage:"", customStyle: "" }
 	)
+    const [isLoaded, setIsLoaded] = useState(false)
 	const ref = useMemo(() => createRef())
 	const isInView = useInView(ref, {
 		amount: "some",
 	});
+
+	function loadData() { 
+		setIsLoaded(false) 
+	}
 
 	async function fetchData() {
 		try {
@@ -30,6 +33,7 @@ export default function ToolGameEngine({ path }) {
 			})
 			.then((finalData) =>
 			{
+				setIsLoaded(true)
 				const dataDict = Object.entries(finalData)[0]
 				setData({...data,
 					items: dataDict, name: dataDict[0],
@@ -44,14 +48,15 @@ export default function ToolGameEngine({ path }) {
 	
 	useEffect(function()
 	{
-		fetchData()
+		if (isLoaded === false)
+			fetchData()
 
 		window.scrollTo({
 			top: document.body.scrollHeight,
 			behavior: 'instant',
 		})
 		
-	},[]);
+	},[isLoaded]);
 
 
 	return (
@@ -66,7 +71,7 @@ export default function ToolGameEngine({ path }) {
 					|| location.pathname === "/unity" && 
 					<ToolUnityNodes commits={data.commits} indexShow={isInView}/>
 					|| location.pathname === "/python" && 
-					<ToolPythonNodess commits={data.commits} indexShow={isInView}/>
+					<ToolPythonNodes commits={data.commits} indexShow={isInView}/>
 				}
 				<SplashScreen splashImage={data.splashImage} name={data.name}
 				 	reference={ref}/>
