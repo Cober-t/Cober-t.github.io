@@ -6,24 +6,18 @@ import SplashScreen from "./SplashScreen.jsx"
 import { motion, useInView } from "framer-motion"
 import { useLocation } from 'react-router-dom';
 
-export const ToolContext = createContext(); 
 
-export default function ToolBranch({ path }) {
+export default function ToolGameEngine({ path }) {
 
 	const location = useLocation()
 
 	const [data, setData] = useState(
 		{ items: "", name: "", commits:"", splashImage:"", customStyle: "" }
 	)
-    const [isLoaded, setIsLoaded] = useState(false)
 	const ref = useMemo(() => createRef())
 	const isInView = useInView(ref, {
 		amount: "some",
 	});
-
-	function loadData() { 
-		setIsLoaded(false) 
-	}
 
 	async function fetchData() {
 		try {
@@ -36,7 +30,6 @@ export default function ToolBranch({ path }) {
 			})
 			.then((finalData) =>
 			{
-				setIsLoaded(true)
 				const dataDict = Object.entries(finalData)[0]
 				setData({...data,
 					items: dataDict, name: dataDict[0],
@@ -51,15 +44,14 @@ export default function ToolBranch({ path }) {
 	
 	useEffect(function()
 	{
-		if (isLoaded === false)
-			fetchData()
+		fetchData()
 
 		window.scrollTo({
 			top: document.body.scrollHeight,
 			behavior: 'instant',
 		})
 		
-	},[isLoaded]);
+	},[]);
 
 
 	return (
