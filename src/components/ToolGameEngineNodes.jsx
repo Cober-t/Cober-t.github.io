@@ -19,7 +19,7 @@ function Node({ name, animation, description }) {
     )
 }
 
-export default function ToolNodes({ commits, indexShow }) {
+export default function ToolGameEngineNodes({ commits, indexShow }) {
 
     const nodeRefs = useMemo(() =>
         Array(commits.length)

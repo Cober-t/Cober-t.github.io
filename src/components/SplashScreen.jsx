@@ -52,9 +52,9 @@ export default function SplashScreen({ splashImage, name, reference }) {
 
 		{/* NAV BAR */}
 		<div className={`absolute z-50 justify-center flex flex-row w-full h-screen items-end gap-5`}>
-			{/* <Link onClick={loadData} to="/" className={`${NavColor("/")} h-5 w-5 rounded-full mb-[50px]`}/> */}
+			<Link onClick={loadData} to="/" className={`${NavColor("/")} h-5 w-5 rounded-full mb-[50px]`}/>
 			<Link onClick={loadData} to="/unity" className={`${NavColor("/unity")} h-5 w-5 rounded-full mb-[50px]`}/>
-			{/* <Link onClick={loadData} to="/python" className={`${NavColor("/python")} h-5 w-5 rounded-full mb-[50px]`}/> */}
+			<Link onClick={loadData} to="/python" className={`${NavColor("/python")} h-5 w-5 rounded-full mb-[50px]`}/>
 		</div>
 		
 		{/* Tranparent background Image / Gif */}
