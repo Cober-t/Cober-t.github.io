@@ -1,5 +1,7 @@
 import React from 'react';
-import ToolBranch from './ToolBranch.jsx';
+import ToolUnity from './ToolUnity.jsx'
+import ToolPython from './ToolPython.jsx'
+import ToolGameEngine from './ToolGameEngine.jsx'
 import { pathGameEngine, pathUnity, pathPython } from "../constants.jsx"
 import '../style.css'
 import { useLocation } from 'react-router-dom';
@@ -14,14 +16,14 @@ export default function App() {
         <>
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                {/* <Route path="/" exact element={
-                    <ToolBranch path={pathGameEngine}/>
-                }/> */}
-                {/* <Route path="/python" exact element={
-                    <ToolBranch path={pathPython}/>
-                } /> */}
+                <Route path="/" exact element={
+                    <ToolGameEngine path={pathGameEngine}/>
+                }/>
+                <Route path="/python" exact element={
+                    <ToolPython path={pathPython}/>
+                } />
                 <Route path="/unity" exact element={
-                    <ToolBranch path={pathUnity}/>
+                    <ToolUnity path={pathUnity}/>
                 } />
             </Routes>
 

@@ -29,7 +29,6 @@ export default function ToolNodes({ commits, indexShow }) {
   
     return (
         <>
-            
             {
                 nodeRefs && 
                 <Index commits={commits} refs={nodeRefs} show={indexShow}/>

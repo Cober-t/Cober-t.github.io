@@ -1,12 +1,9 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom";
 import '../style.css'
-import { ToolContext } from "./ToolBranch.jsx";
 
 
 export default function SplashScreen({ splashImage, name, reference }) {
-
-	const { loadData } = useContext(ToolContext)
 
 	function NavColor(path) {
 		let color = "bg-white hover:bg-gray-700"
@@ -21,7 +18,6 @@ export default function SplashScreen({ splashImage, name, reference }) {
 
 	return (
 	<>
-
 		<div className='absolute z-30 overflow-hidden flex flex-row h-screen w-full justify-center items-center'
 			ref={reference}>
 			
@@ -52,9 +48,9 @@ export default function SplashScreen({ splashImage, name, reference }) {
 
 		{/* NAV BAR */}
 		<div className={`absolute z-50 justify-center flex flex-row w-full h-screen items-end gap-5`}>
-			{/* <Link onClick={loadData} to="/" className={`${NavColor("/")} h-5 w-5 rounded-full mb-[50px]`}/> */}
-			<Link onClick={loadData} to="/unity" className={`${NavColor("/unity")} h-5 w-5 rounded-full mb-[50px]`}/>
-			{/* <Link onClick={loadData} to="/python" className={`${NavColor("/python")} h-5 w-5 rounded-full mb-[50px]`}/> */}
+			<Link to="/" className={`${NavColor("/")} h-5 w-5 rounded-full mb-[50px]`}/>
+			<Link to="/unity" className={`${NavColor("/unity")} h-5 w-5 rounded-full mb-[50px]`}/>
+			<Link to="/python" className={`${NavColor("/python")} h-5 w-5 rounded-full mb-[50px]`}/>
 		</div>
 		
 		{/* Tranparent background Image / Gif */}
