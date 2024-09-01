@@ -1,7 +1,5 @@
 import React, { useEffect, useState, createRef, useMemo, createContext } from 'react';
-import ToolGameEngineNodes from './ToolGameEngineNodes.jsx'
-import ToolPythonNodes from './ToolPythonNodes.jsx'
-import ToolUnityNodes from './ToolUnityNodes.jsx'
+import ToolNodes from './ToolNodes.jsx'
 import SplashScreen from "./SplashScreen.jsx"
 import { motion, useInView } from "framer-motion"
 
@@ -65,14 +63,8 @@ export default function ToolBranch({ path }) {
 		<ToolContext.Provider value={{isLoaded, loadData}}>
 
 			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center no-scrollbar">
-				{
-					location.pathname === "/" && 
-					<ToolGameEngineNodes commits={data.commits} indexShow={isInView}/>
-					|| location.pathname === "/unity" && 
-					<ToolUnityNodes commits={data.commits} indexShow={isInView}/>
-					|| location.pathname === "/python" && 
-					<ToolPythonNodes commits={data.commits} indexShow={isInView}/>
-				}
+				<ToolNodes commits={data.commits} indexShow={isInView}/>
+
 				<SplashScreen splashImage={data.splashImage} name={data.name}
 				 	reference={ref}/>
 			</div>

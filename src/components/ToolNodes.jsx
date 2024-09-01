@@ -19,7 +19,7 @@ function Node({ name, animation, description }) {
     )
 }
 
-export default function ToolPythonNodes({ commits, indexShow }) {
+export default function ToolNodes({ commits, indexShow }) {
     
     const nodeRefs = useMemo(() =>
         Array(commits.length)
@@ -65,7 +65,7 @@ export default function ToolPythonNodes({ commits, indexShow }) {
                         />
                 </div>
 
-                { result.length > 0 && <div>{result}</div> }
+                { result.length > 0 && <>{result}</> }
             </div>
         ) 
     }
