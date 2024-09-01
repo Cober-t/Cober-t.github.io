@@ -20,16 +20,70 @@ function Node({ name, animation, description }) {
 }
 
 export default function ToolPythonNodes({ commits, indexShow }) {
-
+    
     const nodeRefs = useMemo(() =>
         Array(commits.length)
         .fill(0)
         .map(i=> createRef())
     )
-  
+    let j = 0
+
+    function BackgroundNode({ background }) {
+        return (
+            <div style={{ '--image-url': `url(${background})` }}
+            className={`sticky bottom-0 bg-[image:var(--image-url)]
+                h-screen w-full -mb-[750px] bg-center bg-cover bg-no-repeat`}
+                />   
+        )
+    }
+
+    function Commit({ commit, index }) {
+        const result = []
+        let i = index + 1;
+
+        while (i < commits.length && !commits[i].main)
+        {
+            result.push(
+            <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
+                ref={nodeRefs[i]}>
+                <Node name={commits[i].name} 
+                    animation={commits[i].animation} 
+                    description={commits[i].description}
+                    />
+            </div>)
+
+            i += 1
+        }
+
+        return (
+            <div className='flex flex-col items-center justify-end select-none'>
+                <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
+                ref={nodeRefs[index]}>
+                    <Node name={commit.name} 
+                        animation={commit.animation} 
+                        description={commit.description}
+                        />
+                </div>
+
+                { result.length > 0 && <div>{result}</div> }
+            </div>
+        ) 
+    }
+
+    function Commits() {
+        return (
+            commits.map(( commit, index ) => {
+                return commit.main &&
+                <div>
+                    <Commit commit={commit} index={index} />
+                    <BackgroundNode background={commit.backgroundImage}/>
+                </div>
+            })
+        )
+    }
+
     return (
         <>
-            
             {
                 nodeRefs && 
                 <Index commits={commits} refs={nodeRefs} show={indexShow}/>
@@ -41,46 +95,8 @@ export default function ToolPythonNodes({ commits, indexShow }) {
                 backgroundColor: "#000000", opacity: "0.5" }}/>
 
             <div>
-
-                <div>   
-                    <div style={{ '--image-url': `url(${commits[0].backgroundImage})` }}
-                    className={`sticky bottom-0 bg-[image:var(--image-url)]
-                        h-screen w-full -mb-[750px] bg-center bg-cover bg-no-repeat`}
-                    />
-
-                    <div className='flex flex-col items-center justify-end select-none'>
-                        <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
-                        ref={nodeRefs[0]}>
-                            <Node name={commits[0].name} animation={commits[0].animation} description={commits[0].description} />
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div style={{ '--image-url': `url(${commits[3].backgroundImage})` }}
-                    className={`sticky top-0 bg-[image:var(--image-url)] 
-                        h-screen w-full -mb-[600px] bg-center bg-cover bg-no-repeat`}
-                    />
-
-                    <div className='flex flex-col items-center justify-end select-none'>
-                        <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
-                        ref={nodeRefs[1]}>
-                            <Node name={commits[1].name} animation={commits[1].animation} description={commits[1].description}/>
-                        </div>
-                        <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
-                        ref={nodeRefs[2]}>
-                            <Node name={commits[2].name} animation={commits[2].animation} description={commits[2].description}/>
-                        </div>
-                        <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
-                        ref={nodeRefs[3]}>
-                            <Node name={commits[3].name} animation={commits[3].animation} description={commits[3].description}s/>
-                        </div>
-                    </div>
-                    
-
-                </div>
+                <Commits />
             </div>
-        
         </>
     )
 }
