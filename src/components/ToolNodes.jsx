@@ -1,19 +1,23 @@
 import { createRef, useMemo } from "react"
-import '../style.css'
-import Index from './Index.jsx';
+import { useLocation } from 'react-router-dom'
+import { styles } from '../styles.js'
+import Index from './Index.jsx'
 
-function Node({ name, animation, description }) {
+function Node({ name, animation, description, reference }) {
     return (
-    <div className="absolute z-50">
-        <p className={`flex flex-row flex-nowrap items-center text-center justify-center w-full pl-[50px] pr-[50px] mb-[50px]`}>
-            {name}
-        </p>
-
-        <div className='flex flex-row w-full items-center justify-center gap-5'>
-            <img src={animation} alt="React Logo" className='w-[200px] h-[200px]'/>
-            <p className='flex flex-row max-w-[750px] tracking-wider h-full text-[24px] font-regular items-center'>
-                {description}
+    <div className={`${styles.coreNodeStyle}`}
+        ref={reference}>
+        <div className="absolute z-50">
+            <p className={`${styles.nodeTitleText}`}>
+                {name}
             </p>
+
+            <div className='flex flex-row w-full items-center justify-center gap-5'>
+                <img src={animation} alt="React Logo" className={`${styles.animationSize}`}/>
+                <p className={`${styles.nodeDescriptionText}`}>
+                    {description}
+                </p>
+            </div>
         </div>
     </div>
     )
@@ -21,6 +25,8 @@ function Node({ name, animation, description }) {
 
 export default function ToolNodes({ commits, indexShow }) {
     
+    const location = useLocation()
+
     const nodeRefs = useMemo(() =>
         Array(commits.length)
         .fill(0)
@@ -31,9 +37,10 @@ export default function ToolNodes({ commits, indexShow }) {
     function BackgroundNode({ background }) {
         return (
             <div style={{ '--image-url': `url(${background})` }}
-            className={`sticky bottom-0 bg-[image:var(--image-url)]
-                h-screen w-full -mb-[750px] bg-center bg-cover bg-no-repeat`}
-                />   
+            className={
+                `bg-[image:var(--image-url)] 
+                ${styles.backgroundNode}`
+            }/>   
         )
     }
 
@@ -43,27 +50,27 @@ export default function ToolNodes({ commits, indexShow }) {
 
         while (i < commits.length && !commits[i].main)
         {
-            result.push(
-            <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
-                ref={nodeRefs[i]}>
-                <Node name={commits[i].name} 
-                    animation={commits[i].animation} 
-                    description={commits[i].description}
-                    />
-            </div>)
+            result.push(location.pathname === "/" &&
+                <Node name={commits[i].name} animation={commits[i].animation} 
+                description={commits[i].description} reference={nodeRefs[i]}/>
+                || location.pathname === "/unity" && 
+                <Node name={commits[i].name} animation={commits[i].animation} 
+                description={commits[i].description} reference={nodeRefs[i]}/>
+                || location.pathname === "/python" &&
+                <Node name={commits[i].name} animation={commits[i].animation} 
+                description={commits[i].description} reference={nodeRefs[i]}/>
+            )
 
             i += 1
         }
 
         return (
-            <div className='flex flex-col items-center justify-end select-none'>
-                <div className='flex flex-row text-center items-center justify-center whitespace-pre-line w-full h-screen text-[60px] uppercase'
-                ref={nodeRefs[index]}>
-                    <Node name={commit.name} 
-                        animation={commit.animation} 
-                        description={commit.description}
-                        />
-                </div>
+            <div className='flex flex-col select-none'>
+                <Node name={commit.name} 
+                    animation={commit.animation} 
+                    description={commit.description}
+                    reference={nodeRefs[index]}
+                    />
 
                 { result.length > 0 && <>{result}</> }
             </div>
@@ -81,6 +88,7 @@ export default function ToolNodes({ commits, indexShow }) {
             })
         )
     }
+    
 
     return (
         <>

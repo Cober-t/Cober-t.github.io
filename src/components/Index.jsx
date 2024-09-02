@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { styles } from "../styles"
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Index({ commits, refs, show }) {
 

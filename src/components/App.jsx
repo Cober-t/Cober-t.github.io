@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import ToolBranch from './ToolBranch.jsx'
 import { pathGameEngine, pathUnity, pathPython } from "../constants.jsx"
 import '../style.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 import { Routes, Route } from "react-router-dom"
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion'
 
 export default function App() {
 
