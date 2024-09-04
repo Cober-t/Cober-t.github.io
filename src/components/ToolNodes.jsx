@@ -12,11 +12,11 @@ function Node({ name, animation, description, reference }) {
                 {name}
             </p>
 
-            <div className='flex flex-row w-full items-center justify-center gap-5'>
-                <img src={animation} alt="React Logo" className={`${styles.animationSize}`}/>
+            <div className='flex xs:flex-col md:flex-row w-full text-justify items-center justify-center gap-5'>
                 <p className={`${styles.nodeDescriptionText}`}>
                     {description}
                 </p>
+                {animation && <img src={animation} alt="React Logo" className={`${styles.animationSize}`}/>}
             </div>
         </div>
     </div>

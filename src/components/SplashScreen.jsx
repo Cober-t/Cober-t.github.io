@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { styles } from "../styles"
 import { ToolContext } from "./ToolBranch";
 
@@ -7,6 +7,17 @@ import { ToolContext } from "./ToolBranch";
 export default function SplashScreen({ splashImage, name, reference }) {
 
 	const { loadData } = useContext(ToolContext)
+	const location = useLocation()
+	const [titleFontSize, setTitleFontSize] = useState(`text-[30vw]`)
+
+	useEffect(function() {
+		if (location.pathname === '/')
+			setTitleFontSize('xs:text-[40vw] sm:text-[40vw] md:text-[36vw] xl:text-[32vw]')
+		else if (location.pathname === '/unity')
+			setTitleFontSize('text-[65vw]')
+		else if (location.pathname === '/python')
+			setTitleFontSize('text-[55vw]')
+	},[location])
 
 	function NavColor(path) {
 		let color = "bg-white hover:bg-gray-700"
@@ -23,9 +34,8 @@ export default function SplashScreen({ splashImage, name, reference }) {
 		return (
 			<div style={{'--image-url': `url(${splashImage})`}}
 			className={
-				`absolute bg-[image:var(--image-url)] 
-				${styles.splashScreenBackgroundStyle} 
-				${styles.splashScreenTitle}`
+				`absolute bg-[image:var(--image-url)] text-transparent
+				${styles.splashScreenBackgroundStyle}`
 			}>
 
 				<p className={`${prop}`}>
@@ -39,10 +49,11 @@ export default function SplashScreen({ splashImage, name, reference }) {
 	<>
 		<div className={`${styles.coreSplashScreen}`}
 			ref={reference}>
-			<SplashTitle prop={`${styles.splashScreenText}`}/>
-			<SplashTitle prop={`text-stroke ${styles.splashScreenText}`}/>
+			<SplashTitle prop={`${styles.splashScreenText} ${titleFontSize}`}/>
+			{/* <SplashTitle prop={`text-stroke ${styles.splashScreenText} ${titleFontSize}`}/> */}
 		</div>	
 
+		
 		{/* NAV BAR */}
 		<div className={`${styles.navBar}`}>
 			<Link onClick={loadData} to="/" className={`${NavColor("/")} ${styles.navCircle}`}/>
@@ -50,14 +61,12 @@ export default function SplashScreen({ splashImage, name, reference }) {
 			<Link onClick={loadData} to="/python" className={`${NavColor("/python")} ${styles.navCircle}`}/>
 		</div>
 		
-		
 		{/* Tranparent background Image / Gif */}
-		<div className='z-20 relative flex flex-row h-screen w-full
-			top-1/2 left-1/2 bg-orange -translate-x-1/2'>
+		<div className='z-20 relative flex flex-row h-screen w-full top-1/2 bg-black'>
 
 			<div style={{'--image-url': `url(${splashImage})`}}
 			className={`absolute bg-[image:var(--image-url)] ${styles.splashScreenBackgroundStyle}`}>
-				<div className='flex flex-row w-[100vw] h-[100vh] bg-toolBGColor opacity-85'/>
+				<div className='flex flex-row w-full h-screen bg-toolBGColor opacity-90'/>
 			</div>
 		</div>
 	</>

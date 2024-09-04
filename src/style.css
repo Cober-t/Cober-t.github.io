@@ -1,6 +1,9 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 
 @tailwind base;
+html {
+	scroll-behavior: smooth;
+}
 @tailwind components;
 @tailwind utilities;
 
@@ -111,8 +114,9 @@
 }
 
 @font-face {
-	font-family: "Ignite";
-	src: local("Ignite"),
-		url(/fonts/Ignite.otf) format("otf");
-	font-weight: bold;
+    font-family: 'RobotoCondensed';
+    src: url('fonts/Deutschlander-O5we.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
 }

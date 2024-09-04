@@ -7,7 +7,6 @@
             {
                 "name": "Sistema de dialogo",
                 "description": "./myGameEngine/ption/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "2"
@@ -15,7 +14,6 @@
             {
                 "name": "More explikeision",
                 "description": "./myGameEngine/descriptiost.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false,
                 "index": "1.2"
@@ -23,7 +21,6 @@
             {
                 "name": "explicacion de detalles",
                 "description": "./myGameEngine/descriptiost.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false,
                 "index": "1.1"
@@ -31,7 +28,6 @@
             {
                 "name": "Generador de terreno",
                 "description": "./myGiption/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true,
                 "index": "1"

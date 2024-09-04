@@ -1,5 +1,5 @@
 {
-    "MY GAME ENGINE":
+    "MI MOTOR DE VIDEO JUEGOS":
     {
         "splashImage": "./myGameEngine/parallaxImage.png",
         "commits": 
@@ -222,7 +222,7 @@
             },
             {
                 "name": "First Commit (explicación)",
-                "description": "./myGameEngine/description/test.txt",
+                "description": "Esta es una explicación de ejemplo de lo que podría ser el nodo inicial del proyecto. En el que explicare de lo que trata mediante un resumen de este",
                 "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
