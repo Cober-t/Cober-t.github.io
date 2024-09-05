@@ -7,7 +7,6 @@
             {
                 "name": "Sincronización de Telegram con APIs de Todoist, Notion, Obsidian...",
                 "description": "./myGameEngine/ption/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "4"
@@ -15,7 +14,6 @@
             {
                 "name": "Servidor para validar nomenclaturas de archivos",
                 "description": "./myGiption/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true,
                 "index": "3"
@@ -23,7 +21,6 @@
             {
                 "name": "Launcher para proyectos del motor",
                 "description": "./myGameEngine/descriptiost.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "2"
@@ -31,7 +28,6 @@
             {
                 "name": "Validador de condiciones para exportar modelos y animaciones en Maya",
                 "description": "./myGameEngine/descriptiost.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "2"
@@ -39,7 +35,6 @@
             {
                 "name": "Rigging automatico en Blender",
                 "description": "./myGameEngine/descriptiost.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true,
                 "index": "1"

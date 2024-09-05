@@ -18,7 +18,7 @@ const styles = {
     indexNodeWidth: "opacity-0 bg-transparent w-10",
 
     // SPLASH SCREEN
-    coreSplashScreen: "absolute z-30 overflow-hidden flex flex-row \
+    coreSplashScreen: "absolute z-50 overflow-hidden flex flex-row \
     h-screen w-full justify-center items-center",
     // splashScreenTitle: "items-center justify-center whitespace-pre-line text-transparent",
     splashScreenText: "w-full font-title flex items-center font-extrabold justify-center \
@@ -30,9 +30,9 @@ const styles = {
     
     // NODES
     coreNodeStyle: "flex flex-row text-center items-center justify-center \
-    whitespace-pre-line w-full h-screen",
+    whitespace-pre-line w-full xs:h-[50vh] md:xs:h-[110vh]",
     nodeTitleText: "flex flex-row font-['RobotoCondensed'] font-regular uppercase tracking-wide \
-    w-full pl-[50px] pr-[50px] mb-[50px] justify-center \
+    w-full pl-[50px] pr-[50px] md:mb-[50px] justify-center \
     xs:text-[10vw] sm:text-[10vw] md:text-[8vw]",
     nodeDescriptionText: "flex xs:flex-col md:flex-row max-w-[1000px] tracking-normal uppercase\
     font-['Montserrat'] font-semibold p-10 \
@@ -40,8 +40,9 @@ const styles = {
     navCircle: "h-5 w-5 rounded-full mb-[50px]",
     animationSize: "w-[200px] h-[200px]",
 
-    backgroundNode: "sticky bottom-0 h-screen w-full \
-    mt-[-20vh] bg-center bg-cover bg-no-repeat"
+    backgroundNode: "sticky md:translate-y-0 \
+    xs:h-[50vh] xs:w-full md:h-screen md:w-full \
+    md:mt-[-20vh] bg-center bg-cover bg-no-repeat"
 };
 
 export { styles };

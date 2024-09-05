@@ -37,7 +37,6 @@ export default function SplashScreen({ splashImage, name, reference }) {
 				`absolute bg-[image:var(--image-url)] text-transparent
 				${styles.splashScreenBackgroundStyle}`
 			}>
-
 				<p className={`${prop}`}>
 					{`${name}`}
 				</p>
@@ -62,10 +61,11 @@ export default function SplashScreen({ splashImage, name, reference }) {
 		</div>
 		
 		{/* Tranparent background Image / Gif */}
-		<div className='z-20 relative flex flex-row h-screen w-full top-1/2 bg-black'>
+		<div className='z-40 relative flex flex-row h-screen w-full top-1/2 bg-black'>
 
 			<div style={{'--image-url': `url(${splashImage})`}}
-			className={`absolute bg-[image:var(--image-url)] ${styles.splashScreenBackgroundStyle}`}>
+			className={`absolute bg-[image:var(--image-url)]
+			h-screen w-full flex bg-center bg-cover bg-no-repeat`}>
 				<div className='flex flex-row w-full h-screen bg-toolBGColor opacity-90'/>
 			</div>
 		</div>

@@ -7,7 +7,6 @@
             {
                 "name": "Match 3",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "6"
@@ -15,7 +14,6 @@
             {
                 "name": "Sistema de animacion con transiciones (Tweens)(lerp)",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "6.3"
@@ -23,7 +21,6 @@
             {
                 "name": "Generación de una mátriz donde las entidades limitan su comportamiento",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "6.2"
@@ -31,7 +28,6 @@
             {
                 "name": "Selección de entidades a través de la pantalla",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "6.1"
@@ -39,7 +35,6 @@
             {
                 "name": "Breakout",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "5"
@@ -47,7 +42,6 @@
             {
                 "name": "Carga de escenas (niveles)",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "5.3"
@@ -55,7 +49,6 @@
             {
                 "name": "Sistema de particulas",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "5.2"
@@ -63,7 +56,6 @@
             {
                 "name": "Atlas de texturas para optimizar",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "5.1"
@@ -71,7 +63,6 @@
             {
                 "name": "Flappy Bird",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "4"
@@ -79,7 +70,6 @@
             {
                 "name": "Creación de prefabs para agilizar el prototipado en el Editor",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "4.5"
@@ -87,7 +77,6 @@
             {
                 "name": "Reinicio de la escena dentro del juego",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "4.4"
@@ -95,7 +84,6 @@
             {
                 "name": "Serialización y deserialización de los datos de una escena",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "4.3"
@@ -103,7 +91,6 @@
             {
                 "name": "Renderizado de texto",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "4.2"
@@ -111,7 +98,6 @@
             {
                 "name": "Renderizado de texturas",
                 "description": "./myGameEngine/\ndddddescription/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "4.1"
@@ -119,7 +105,6 @@
             {
                 "name": "Pong",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": true,
                 "index": "3"
@@ -127,7 +112,6 @@
             {
                 "name": "Camara de juego virtual",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false,
                 "index": "3.4"
@@ -135,7 +119,6 @@
             {
                 "name": "Sistema de scripting nativo en C++",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false,
                 "index": "3.3"
@@ -143,7 +126,6 @@
             {
                 "name": "Físicas 2D y Sistema de Eventos",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false,
                 "index": "3.2"
@@ -151,7 +133,6 @@
             {
                 "name": "Sistema de audio",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./myGameEngine/parallaxImage.png",
                 "main": false,
                 "index": "3.1"
@@ -159,7 +140,6 @@
             {
                 "name": "Core",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "2"
@@ -167,7 +147,6 @@
             {
                 "name": "Launcher, para abrir y crear projectos",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "2.7"
@@ -175,7 +154,6 @@
             {
                 "name": "Editor (ImGui)",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "2.6"
@@ -183,7 +161,6 @@
             {
                 "name": "Sistema de entidades y componentes",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "2.5"
@@ -191,7 +168,6 @@
             {
                 "name": "Implementación de una API para los gráficos (OpenGL)",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "2.4"
@@ -199,7 +175,6 @@
             {
                 "name": "Inputs",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "2.3"
@@ -207,7 +182,6 @@
             {
                 "name": "Sistema de log",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "2.2"
@@ -215,7 +189,6 @@
             {
                 "name": "Configuración del projecto (Cmake)",
                 "description": "./myGameEngine/description/test.txt",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": false,
                 "index": "2.1"
@@ -223,7 +196,6 @@
             {
                 "name": "First Commit (explicación)",
                 "description": "Esta es una explicación de ejemplo de lo que podría ser el nodo inicial del proyecto. En el que explicare de lo que trata mediante un resumen de este",
-                "animation": "./myGameEngine/animation/testAnimation.svg",
                 "backgroundImage": "./unity/parallaxImage.jpg",
                 "main": true,
                 "index": "1"

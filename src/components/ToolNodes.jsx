@@ -38,8 +38,8 @@ export default function ToolNodes({ commits, indexShow }) {
         return (
             <div style={{ '--image-url': `url(${background})` }}
             className={
-                `bg-[image:var(--image-url)] 
-                ${styles.backgroundNode}`
+                `bg-[image:var(--image-url)] xs:z-40 md:z-10
+                ${styles.backgroundNode} w-full top-0 opacity-50`
             }/>   
         )
     }
@@ -65,7 +65,7 @@ export default function ToolNodes({ commits, indexShow }) {
         }
 
         return (
-            <div className='flex flex-col select-none'>
+            <div className='flex flex-col select-none'>            
                 <Node name={commit.name} 
                     animation={commit.animation} 
                     description={commit.description}
@@ -82,8 +82,10 @@ export default function ToolNodes({ commits, indexShow }) {
             commits.map(( commit, index ) => {
                 return commit.main &&
                 <div>
-                    <Commit commit={commit} index={index} />
+
                     <BackgroundNode background={commit.backgroundImage}/>
+
+                    <Commit commit={commit} index={index} />
                 </div>
             })
         )
@@ -92,18 +94,16 @@ export default function ToolNodes({ commits, indexShow }) {
 
     return (
         <>
-            {
+            {/* {
                 nodeRefs && 
                 <Index commits={commits} refs={nodeRefs} show={indexShow}/>
-            }
+            } */}
 
-            {/* BACKGROUND TINT*/}
-            <div style={{ position: "fixed",  zIndex:"30",
-                height: "100vh", width: "100vw",
-                backgroundColor: "#000000", opacity: "0.5" }}/>
-
-            <div>
+            <div className="bg-black">
                 <Commits />
+                <div className="z-40 sticky bottom-0 xs:h-[50vh] xs:w-full bg-black
+                md:h-0 md:w-0 md:bg-transparent">
+                </div>
             </div>
         </>
     )
