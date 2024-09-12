@@ -1,10 +1,11 @@
 import React from 'react'
 import ToolBranch from './ToolBranch.jsx'
 import { pathGameEngine, pathUnity, pathPython } from "../constants.jsx"
-import '../style.css'
 import { useLocation } from 'react-router-dom'
 import { Routes, Route } from "react-router-dom"
 import { AnimatePresence } from 'framer-motion'
+import '../style.css'
+// import { Contact } from "./Contact.jsx"
 
 export default function App() {
 
@@ -23,6 +24,9 @@ export default function App() {
                 <Route path="/unity" exact element={
                     <ToolBranch path={pathUnity}/>
                 } />
+                {/* <Route path="/contact" exact element={
+                    <Contact />
+                } /> */}
             </Routes>
         </AnimatePresence>
         </>

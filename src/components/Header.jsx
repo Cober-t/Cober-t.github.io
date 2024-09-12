@@ -4,7 +4,7 @@ import MobileNav from "./MobileNav.jsx"
 
 const Header = () => {
 
-    return <header className="py-8 xl:py-12 text-white bg-pink-20 overflow-hidden">
+    return <header className="py-8 xl:py-12 text-white overflow-hidden">
 		<div className="container mx-auto flex justify-between items-center
 		font-['Tahoma'] xs:text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.75vw]">
 			<Link to="/">

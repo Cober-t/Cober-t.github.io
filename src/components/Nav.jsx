@@ -1,24 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
-
-const links = [
-    {
-        name:"home",
-        path: "/",
-    },
-    {
-        name:"experience",
-        path: "/python",
-    },
-    {
-        name:"projects",
-        path: "/unity",
-    },
-    {
-        name:"contact",
-        path: "/unity",
-    }
-]
+import { links } from "../constants.jsx"
 
 
 const Nav = () => {

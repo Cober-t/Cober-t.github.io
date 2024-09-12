@@ -1,12 +1,9 @@
 import { useState, useRef } from "react"
 import emailjs from '@emailjs/browser'
-
 import { styles } from "../styles"
-// import { motion } from 'framer-motion'
-// import { slideIn } from "../utils/motion"
 
 
-export default function Contact() {
+const Contact = () => {
 
 	const formRef = useRef()
 	const [form, setForm] = useState({
@@ -55,6 +52,11 @@ export default function Contact() {
 	}
 
 	return (
+		<>
+		<Header />
+
+		<PageTransition />
+		<MotionTranstion />
 		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-screen overflow-hidden`}>
 
 			<h3 className={`${styles.sectionHeadText} mt-[50px] font-homeSections font-regular flex flex-col items-center`}>
@@ -110,7 +112,9 @@ export default function Contact() {
 				<a href="https://google.com" target="_blank" className="bg-purple-600 hover:bg-purple-700 h-8 w-8 rounded-full"/>
 				<a href="https://google.com" target="_blank" className="bg-amber-600 hover:bg-amber-700 h-8 w-8 rounded-full"/>
 			</div>
-
 		</div>
+		</>
 	)
 }
+
+export default Contact
