@@ -2,6 +2,8 @@ import { useState, useRef } from "react"
 import emailjs from '@emailjs/browser'
 import { styles } from "../styles"
 
+import PageTransition from "./PageTransition.jsx"
+import MotionTranstion from "./MotionTransition.jsx"
 
 const Contact = () => {
 
@@ -53,14 +55,12 @@ const Contact = () => {
 
 	return (
 		<>
-		<Header />
-
 		<PageTransition />
 		<MotionTranstion />
-		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-screen overflow-hidden`}>
+		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden`}>
 
-			<h3 className={`${styles.sectionHeadText} mt-[50px] font-homeSections font-regular flex flex-col items-center`}>
-				CONTACT ME!
+			<h3 className={`text-4xl font-homeSections font-regular flex flex-col items-center`}>
+				CONTACT ME
 			</h3>
 
 			<form
@@ -106,12 +106,12 @@ const Contact = () => {
 
 			</form>
 			
-			<div className="flex flex-row justify-evenly">
+			{/* <div className="flex flex-row justify-evenly">
 				<a href="https://google.com" target="_blank" className="bg-red-600 hover:bg-red-700 h-8 w-8 rounded-full"/>
 				<a href="https://google.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 h-8 w-8 rounded-full"/>
 				<a href="https://google.com" target="_blank" className="bg-purple-600 hover:bg-purple-700 h-8 w-8 rounded-full"/>
 				<a href="https://google.com" target="_blank" className="bg-amber-600 hover:bg-amber-700 h-8 w-8 rounded-full"/>
-			</div>
+			</div> */}
 		</div>
 		</>
 	)

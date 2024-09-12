@@ -51,7 +51,6 @@ export default function ToolBranch({ path }) {
 
 	return (
 		<>
-			<Header />
 			<Hero />
 
 			<PageTransition />

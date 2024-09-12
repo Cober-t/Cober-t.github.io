@@ -16,15 +16,15 @@ const links = [
     },
     {
         name:"experience",
-        path: "/python",
+        path: "/experience",
     },
     {
         name:"projects",
-        path: "/unity",
+        path: "/projects",
     },
     {
         name:"contact",
-        path: "/unity",
+        path: "/contact",
     }
 ]
 

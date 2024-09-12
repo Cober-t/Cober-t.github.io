@@ -32,7 +32,7 @@ const Nav = () => {
     }, []);
 
     
-    return <nav className={`flex gap-8 ${scrolled ? "bg-primary" : "bg-transparent"}`}>
+    return <nav className={`flex gap-8 flex-row ${scrolled ? "bg-primary" : "bg-transparent"}`}>
         {links.map((link, index)=> {
             return (
             <Link to={link.path} key={index} className={`${NavColor(link.path)}`}>
