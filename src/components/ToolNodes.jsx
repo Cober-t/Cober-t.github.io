@@ -1,7 +1,6 @@
 import { createRef, useMemo } from "react"
 import { useLocation } from 'react-router-dom'
 import { styles } from '../styles.js'
-import Index from './Index.jsx'
 
 function Node({ name, animation, description, reference }) {
     return (
@@ -23,7 +22,7 @@ function Node({ name, animation, description, reference }) {
     )
 }
 
-export default function ToolNodes({ commits, indexShow }) {
+export default function ToolNodes({ commits }) {
     
     const location = useLocation()
 
@@ -65,7 +64,7 @@ export default function ToolNodes({ commits, indexShow }) {
         }
 
         return (
-            <div className='flex flex-col select-none'>            
+            <div className='flex flex-row overflow-x-hidden select-none'>            
                 <Node name={commit.name} 
                     animation={commit.animation} 
                     description={commit.description}
@@ -82,7 +81,6 @@ export default function ToolNodes({ commits, indexShow }) {
             commits.map(( commit, index ) => {
                 return commit.main &&
                 <div>
-
                     <BackgroundNode background={commit.backgroundImage}/>
 
                     <Commit commit={commit} index={index} />

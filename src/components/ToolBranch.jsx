@@ -1,12 +1,13 @@
-import React, { useEffect, useState, createRef, useMemo, createContext } from 'react';
-import ToolNodes from './ToolNodes.jsx'
+import React, { useEffect, useState, createRef, useMemo } from 'react';
 import SplashScreen from "./SplashScreen.jsx"
-import { motion, useInView } from "framer-motion"
-
-export const ToolContext = createContext(); 
+import { useInView } from "framer-motion"
+import Header from "./Header.jsx"
+import PageTransition from "./PageTransition.jsx"
+import MotionTranstion from "./MotionTransition.jsx"
+import Hero from "./Hero.jsx"
 
 export default function ToolBranch({ path }) {
-
+	
 	const [data, setData] = useState(
 		{ items: "", name: "", commits:"", splashImage:"", customStyle: "" }
 	)
@@ -15,11 +16,7 @@ export default function ToolBranch({ path }) {
 	const isInView = useInView(ref, {
 		amount: "some",
 	});
-
-	function loadData() { 
-		setIsLoaded(false) 
-	}
-
+	
 	async function fetchData() {
 		try {
 			await fetch(path)
@@ -49,44 +46,24 @@ export default function ToolBranch({ path }) {
 		if (isLoaded === false)
 			fetchData()
 
-		window.scrollTo({
-			top: document.body.scrollHeight,
-			behavior: 'instant',
-		})
-		
 	},[isLoaded]);
 
 
 	return (
 		<>
-		{ data && data.items &&
-		<ToolContext.Provider value={{isLoaded, loadData}}>
+			<Header />
+			<Hero />
 
-			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center no-scrollbar">
-				<ToolNodes commits={data.commits} indexShow={isInView}/>
+			<PageTransition />
+			<MotionTranstion />
 
-				<SplashScreen splashImage={data.splashImage} name={data.name}
-				 	reference={ref}/>
+			
+			{/* { data && data.items &&
+			<div className="bg-hero-pattern flex flex-row bg-cover bg-no-repeat bg-center no-scrollbar">
+				<SplashScreen splashImage={data.splashImage} name={data.name} commits={data.commits}
+					reference={ref}/>
 			</div>
-
-		</ToolContext.Provider>
-		}
-		
-		<motion.div
-		className="fixed z-[100] top-0 left-0 w-full h-[100vh] outline-none bg-orange origin-left"
-		initial={{ scaleX: 0 }}
-		animate={{ scaleX: 0 }}
-		exit={{ scaleX: 1 }}
-		transition={{ duration: 1.5, ease: [ 0.22, 1, 0.36, 1 ] }}
-		/>
-
-		<motion.div
-		className="fixed z-[100] top-0 left-0 w-full h-[100vh] outline-none bg-orange origin-right"
-		initial={{ scaleX: 1 }}
-		animate={{ scaleX: 0 }}
-		exit={{ scaleX: 0 }}
-		transition={{ duration: 1.5, ease: [ 0.22, 1, 0.36, 1 ] }}
-		/>
-	</>
+			} */}
+		</>
 	)
 }
