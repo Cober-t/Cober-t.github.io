@@ -6,13 +6,13 @@ import { links } from "../constants.jsx"
 const Nav = () => {
 
     function NavColor(path) {
-		let color = "text-white hover:text-red-500"
-	
-		if (window.location.pathname === path)
-			color = "text-orange hover:text-red-500 text-accent border-b-2 border-accent"
-		
-		return `${color} capitalize font-medium hover:text-accent transition-all`
-	}
+      let color = "text-white hover:text-red-500"
+    
+      if (window.location.pathname === path)
+        color = "text-orange hover:text-red-500 text-accent border-b-2 border-accent"
+      
+      return `${color} capitalize font-medium hover:text-accent transition-all`
+	  }
 
     const [scrolled, setScrolled] = useState(false);
   

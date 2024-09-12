@@ -8,7 +8,7 @@ module.exports = {
         "./components/**/*.{js,ts,jsx,tsx}",
 	],
 	mode: "jit",
-	plugins: [require("tailwindcss-animate")],
+	plugins: [],
 	theme: {
     	extend: {
     		colors: {
