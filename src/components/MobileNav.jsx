@@ -25,7 +25,7 @@ const Navbar = () => {
     <div className='xl:hidden fixed h-screen flex justify-end items-start z-40'>
 
         <IconSVG path={toggle ? close : menu} fill="red" 
-        class='w-[28px] h-[28px] object-contain z-50 text-orange'
+        class='w-[28px] h-[28px] justify-end object-contain z-50 text-orange -translate-y-2.5'
         onClick={() => setToggle(!toggle)}
         />
 
