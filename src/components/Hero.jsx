@@ -1,5 +1,3 @@
-import { div } from "three/examples/jsm/nodes/Nodes.js"
-import { styles } from "../styles"
 
 const Hero = () => {
   return (

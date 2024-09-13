@@ -2,7 +2,6 @@ import { useState, useRef } from "react"
 import emailjs from '@emailjs/browser'
 import { styles } from "../styles"
 
-import PageTransition from "./PageTransition.jsx"
 import MotionTranstion from "./MotionTransition.jsx"
 
 const Contact = () => {
@@ -55,7 +54,6 @@ const Contact = () => {
 
 	return (
 		<>
-		<PageTransition />
 		<MotionTranstion />
 		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden`}>
 

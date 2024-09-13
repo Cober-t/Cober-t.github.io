@@ -4,12 +4,12 @@ import MobileNav from "./MobileNav.jsx"
 
 const Header = () => {
 
-    return <header className="py-8 xl:py-12 text-white overflow-hidden">
+    return <header className="py-8 xl:py-12 text-white overflow-hidden z-50">
 		<div className="px-[5vw] flex justify-between items-center
 		font-['Tahoma'] xs:text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.75vw]">
 			<Link to="/">
 			<h1 className="text-4xl font-semibold">
-				Portfolio <span className="text-accent text-orange">.</span>
+				Portfolio <span className="text-accent">.</span>
 			</h1>
 			</Link>
 

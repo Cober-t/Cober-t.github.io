@@ -25,7 +25,7 @@ const Navbar = () => {
     <div className='xl:hidden fixed h-screen flex justify-end items-start z-40'>
 
         <IconSVG path={toggle ? close : menu} fill="red" 
-        class='w-[28px] h-[28px] justify-end object-contain mr-10 z-50 text-orange -translate-y-2.5'
+        class='w-[28px] h-[28px] justify-end object-contain mr-10 z-50 text-accent -translate-y-2.5'
         onClick={() => setToggle(!toggle)}
         />
 
@@ -34,12 +34,13 @@ const Navbar = () => {
         initial={{opacity:0}}
         animate={{opacity:1}}
         transition={{duration:0.2, ease:"easeIn"}}
-        className={`bg-backgroundColor h-[100vh] w-[60vw] flex fixed right-0 top-0 z-40 text-white`}
+        className={`bg-backgroundColor h-[100vh] w-[60vw] flex fixed right-0 top-0 
+        z-40 text-white xl:hidden`}
         >
           <div className="flex flex-col items-center justify-center gap-y-8 w-full h-full 
           uppercase list-none">
             <div>
-              JORGE <span className="text-accent text-orange">PORTFOLIO</span>
+              JORGE <span className="text-accent">PORTFOLIO</span>
             </div>
             {links.map((link, index) => (
             <li
@@ -63,7 +64,8 @@ const Navbar = () => {
         initial={{opacity:1}}
         animate={{opacity:0}}
         transition={{duration:0.2, ease:"easeIn"}}
-        className={`bg-backgroundColor h-[100vh] w-[60vw] flex fixed right-0 top-0 z-40 text-white`}
+        className={`bg-backgroundColor h-[100vh] w-[60vw] flex fixed right-0 top-0
+        z-40 text-white ${toggle === false ? "hidden" : "display"}`}
         />}
 
     </div>
@@ -73,16 +75,15 @@ const Navbar = () => {
     initial={{opacity:0}}
     animate={{opacity:0.75}}
     transition={{duration:0.2, delay:0.15}}
-    className="flex h-screen w-full bg-black fixed top-0 left-0 z-20"
-    onClick={()=> toggle === true && setToggle(false)}>
-    </motion.div> || 
-    !toggle && 
+    className={`flex h-screen w-full bg-black fixed top-0 left-0 z-20 ${toggle === false ? "hidden" : "display"}`}
+    onClick={()=> toggle === true && setToggle(false)} />
+    || !toggle && 
     <motion.div
     initial={{opacity:0.75}}
     animate={{opacity:0.0}}
     transition={{duration:0.2, delay:0.15}}
-    className="flex h-screen w-full bg-black fixed top-0 left-0 z-20">
-    </motion.div>}
+    className={`flex h-screen w-full bg-black fixed top-0 left-0 z-20 ${toggle === false ? "hidden" : "display"}`}/>
+    }
 
     </>
 

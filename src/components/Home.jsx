@@ -1,5 +1,4 @@
 import Hero from "./Hero.jsx"
-import PageTransition from "./PageTransition.jsx"
 import MotionTranstion from "./MotionTransition.jsx"
 
 const Home = () => {
@@ -7,7 +6,6 @@ const Home = () => {
     return (
 		<>
 			<Hero />
-			<PageTransition />
 			<MotionTranstion />
         </>
     )

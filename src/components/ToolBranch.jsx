@@ -2,7 +2,6 @@ import React, { useEffect, useState, createRef, useMemo } from 'react';
 import SplashScreen from "./SplashScreen.jsx"
 import { useInView } from "framer-motion"
 import Header from "./Header.jsx"
-import PageTransition from "./PageTransition.jsx"
 import MotionTranstion from "./MotionTransition.jsx"
 import Hero from "./Hero.jsx"
 
@@ -53,7 +52,6 @@ export default function ToolBranch({ path }) {
 		<>
 			<Hero />
 
-			<PageTransition />
 			<MotionTranstion />
 
 			

@@ -13,6 +13,10 @@ module.exports = {
     	extend: {
     		colors: {
     			primary: '#d9d9d9',
+				accent:{
+					DEFAULT: "rgb(239, 130, 30)",
+					hover: "rgb(239, 100, 30)",
+				},
     			secondary: '#aaa6c3',
     			tertiary: '#151030',
     			'black-100': '#100d25',
