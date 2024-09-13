@@ -4,6 +4,7 @@ import MotionTranstion from "./MotionTransition.jsx"
 
 import { useState } from "react"
 import { BsArrowUpRight, BsGithub } from "react-icons/bs"
+import ProjectSlideButtons from "./ProjectSlideButtons.jsx"
 import { Link } from "react-router-dom"
 import "swiper/css"
 
@@ -89,7 +90,7 @@ const Projects = () => {
                                         return (
                                             <li key={index} className="text-xl text-accent">
                                                 {item.name}
-                                                {index !== project.stack.length - 1&& ","}
+                                                {index !== project.stack.length - 1&& " ,"}
                                             </li>
                                         )
                                     })}
@@ -117,13 +118,19 @@ const Projects = () => {
                                             <div className="h-full relative flex justify-center
                                             items-center bg-pink-50/20">
                                                 <div className="relative flex w-full h-full">
-                                                    <img src={project.image} fill alt=""
+                                                    <img src={project.image} alt=""
                                                     className="object-cover"/>
                                                 </div>
                                             </div>
                                         </SwiperSlide>
                                     )
                                 })}
+                                <ProjectSlideButtons containerStyles="flex gap-2 absolute right-0 
+                                bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between
+                                xl:w-max xl:justify-none"
+                                btnStyles="bg-accent hover:bg-accent-hover text-primary 
+                                text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                                />
                             </Swiper>
                         </div>
                     </div>
