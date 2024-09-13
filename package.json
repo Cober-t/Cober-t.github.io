@@ -24,7 +24,7 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.26.1",
     "react-vertical-timeline-component": "^3.6.0",
-    "swiper": "^11.1.12",
+    "swiper": "^11.1.14",
     "three": "^0.157.0"
   },
   "devDependencies": {
