@@ -13,6 +13,9 @@
 .text-stroke {
 	-webkit-text-stroke: 0.05em white;
 }
+.text-stroke:hover {
+	-webkit-text-stroke: 0.06em rgb(239, 130, 30);
+}
 
 .text-outline {
 	-webkit-text-stroke: 0;
