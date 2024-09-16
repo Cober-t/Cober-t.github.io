@@ -168,7 +168,7 @@ const Projects = () => {
                     })}
                 </div>
 
-                <div className="container mx-auto select-none pt-5 pr-5 pl-5 border-white border-b-2 border-l-2 border-r-2">
+                <div className="container mx-auto select-none pt-5 pr-5 pl-5 border-white border-l-2 border-r-2">
                     <div className="flex flex-col xl:flex-row xl:gap-[30px]">
                         <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col
                         xl:justify-between order-2 xl:order-none">
@@ -214,7 +214,7 @@ const Projects = () => {
                         </div>
 
                         <div className="w-full xl:w-[50%]">
-                            <Swiper spaceBetween={10} slidesPerView={1} onSlideChange={handleSlideChange}
+                            <Swiper spaceBetween={10} loop={true} navigation={true} slidesPerView={1} onSlideChange={handleSlideChange}
                             onSwiper={setSwiper} 
                             className="xl:h-[400px] mb-12">
                                 {projects[currentProject].map((project, index)=> {
@@ -233,12 +233,17 @@ const Projects = () => {
                                 <ProjectSlideButtons containerStyles="flex gap-2 absolute right-0 
                                 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between
                                 xl:w-max xl:justify-none"
+                                projectSize={projects[currentProject].length}
                                 btnStyles="bg-accent hover:bg-accent-hover text-primary 
                                 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                                 />
                             </Swiper>
                         </div>
                     </div>
+
+                </div>
+
+                <div className="w-[100px] bg-orange h-[5px] container mx-auto justify-start">
                 </div>
 
             </motion.div>
