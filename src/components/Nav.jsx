@@ -11,7 +11,7 @@ const Nav = () => {
       if (window.location.pathname === path)
         color = "text-orange hover:text-red-500 text-accent border-b-2 border-accent"
       
-      return `${color} capitalize font-medium hover:text-accent transition-all`
+      return `${color} capitalize font-medium text-xl hover:text-accent transition-all`
 	  }
 
     const [scrolled, setScrolled] = useState(false);
