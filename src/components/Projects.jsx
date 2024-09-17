@@ -159,7 +159,7 @@ const Projects = () => {
                  container mx-auto">
                     {projectsName.map((projectNode, index)=> {
                         return (
-                            <div className="w-full items-center justify-center select-none"
+                            <div className="w-full items-center justify-center select-none text-nowrap"
                             onClick={() => {slideTo(0); setProgress(100/projects[index].length)}}>
                                 <p className={`border-white/20 uppercase pt-2.5 pb-2.5 justify-center flex transition-all
                                 ${currentProject === index ? "bg-pink-20 border-l-2 border-t-2 border-b-0 border-r-2" : 
@@ -178,11 +178,11 @@ const Projects = () => {
                         xl:justify-between order-2 xl:order-none">
                             <div className="flex flex-col gap-[20px] h-[50%]"> 
                                 {/* outline num */}
-                                <div className="text-8xl leading-none font-bold relative text-backgroundColor
-                                text-stroke transition-all duration-300 w-fit">
+                                <div className="text-8xl relative w-fit
+                                text-stroke transition-all duration-300">
                                     {project.num}
                                     <span aria-hidden="true" 
-                                    className="text-outline left-0 absolute">
+                                    className="text-outline left-0 absolute text-backgroundColor">
                                         {project.num}
                                     </span>
                                 </div>
@@ -200,7 +200,7 @@ const Projects = () => {
                                         return (
                                             <li key={index} className="text-xl text-accent">
                                                 {item.name}
-                                                {index !== project.stack.length - 1&& " ,"}
+                                                {/* {index !== project.stack.length - 1 && " ,"} */}
                                             </li>
                                         )
                                     })}
@@ -232,9 +232,7 @@ const Projects = () => {
                                             items-center bg-pink-50/20">
                                                 <div className="relative flex w-full h-full">
                                                     <img src={project.image} alt=""
-                                                    className="object-cover"/>
-
-
+                                                    className="w-full bg-center bg-cover"/>
                                                 </div>
                                             </div>
                                         </SwiperSlide>
