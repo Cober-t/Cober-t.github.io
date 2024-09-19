@@ -57,37 +57,37 @@ const Contact = () => {
 		<MotionTranstion />
 		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden`}>
 
-			<h3 className={`text-4xl font-homeSections font-regular flex flex-col items-center`}>
+			<h3 className={`text-[100px] xl:text-[130px] font-tags flex flex-col items-center mb-10`}>
 				CONTACT ME
 			</h3>
 
 			<form
 				ref={formRef}
 				onSubmit={handleSubmit}
-				className="mb-10 text-secondary rounded-lg text-[18px]"
+				className="mb-10 text-white/50 text-[18px]"
 			>
-				<label className="flex flex-col mb-10 ml-10">
-					<div className="h-[3rem] w-0.5 bg-secondary">
+				<label className="flex flex-col mb-10 ml-10 translate-x-[15vw] xl:translate-x-[30vw]">
+					<div className="h-[3rem] w-0.5 bg-white/50 ">
 						<input 
 							type="text" 
 							name="name"
 							value={form.name}
 							onChange={handleChange}
 							placeholder="YOUR NAME..."
-							className="py-4 px-6 placeholder:text-secondary bg-transparent font-homeSections font-regular outline-none"
+							className="py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none"
 						/>
 					</div>
 				</label>
 
-				<label className='flex flex-col ml-10'>
-					<div className="absolute h-[3rem] w-0.5 bg-secondary">
+				<label className='flex flex-col ml-10 translate-x-[15vw] xl:translate-x-[30vw]'>
+					<div className="h-[3rem] w-0.5 bg-white/50">
 						<input
 							type='email'
 							name='email'
 							value={form.email}
 							onChange={handleChange}
 							placeholder="YOUR EMAIL..."
-							className='py-4 px-6 placeholder:text-secondary bg-transparent font-homeSections font-regular outline-none'
+							className='py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none'
 						/>
 					</div>
 				</label>
@@ -95,21 +95,14 @@ const Contact = () => {
 				<div className="mt-[100px] flex flex-col items-center">
 					<button
 						type="submit"
-						className="py-3 px-8 bg-primary opacity-45 hover:opacity-85
-						outline-none w-fit text-black-100 font-homeSections font-medium rounded-xl"
+						className="py-3 px-8 bg-[#38383e] opacity-45 hover:opacity-85
+						outline-none w-fit text-white/80 font-homeSections font-medium"
 					>
 						{loading ? 'Sending...' : 'Send'}
 					</button>
 				</div>
 
 			</form>
-			
-			{/* <div className="flex flex-row justify-evenly">
-				<a href="https://google.com" target="_blank" className="bg-red-600 hover:bg-red-700 h-8 w-8 rounded-full"/>
-				<a href="https://google.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 h-8 w-8 rounded-full"/>
-				<a href="https://google.com" target="_blank" className="bg-purple-600 hover:bg-purple-700 h-8 w-8 rounded-full"/>
-				<a href="https://google.com" target="_blank" className="bg-amber-600 hover:bg-amber-700 h-8 w-8 rounded-full"/>
-			</div> */}
 		</div>
 		</>
 	)

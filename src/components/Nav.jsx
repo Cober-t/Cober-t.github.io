@@ -6,12 +6,12 @@ import { links } from "../constants.jsx"
 const Nav = () => {
 
     function NavColor(path) {
-      let color = "text-white hover:text-red-500"
+      let color = "text-white hover:accent"
     
       if (window.location.pathname === path)
-        color = "text-orange hover:text-red-500 text-accent border-b-2 border-accent"
+        color = "hover:text-darkOrange text-accent border-b-2 border-accent hover:border-darkOrange"
       
-      return `${color} capitalize font-medium text-xl hover:text-accent transition-all`
+      return `${color} capitalize text-xl hover:text-accent transition-all`
 	  }
 
     const [scrolled, setScrolled] = useState(false);
@@ -32,11 +32,11 @@ const Nav = () => {
     }, []);
 
     
-    return <nav className={`flex gap-8 flex-row ${scrolled ? "bg-primary" : "bg-transparent"}`}>
+    return <nav className={`flex gap-16 flex-row ${scrolled ? "bg-primary" : "bg-transparent"}`}>
         {links.map((link, index)=> {
             return (
             <Link to={link.path} key={index} className={`${NavColor(link.path)}`}>
-                <h1>{link.name}</h1>
+                <h1 className="text-4xl font-thin font-tags uppercase">{link.name}</h1>
             </Link>
             )
         })}

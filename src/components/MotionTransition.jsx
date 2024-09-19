@@ -15,7 +15,7 @@ const MotionTransition = () => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 0 }}
             exit={{ scaleX: 1 }}
-            transition={{ duration: 1.5, ease: [ 0.22, 1, 0.36, 1 ] }}
+            transition={{ duration: 1, ease: [ 0.22, 1, 0.36, 1 ] }}
             />
 
             <motion.div
@@ -23,7 +23,7 @@ const MotionTransition = () => {
             initial={{ scaleX: 1 }}
             animate={{ scaleX: 0 }}
             exit={{ scaleX: 0 }}
-            transition={{ duration: 1.5, ease: [ 0.22, 1, 0.36, 1 ] }}
+            transition={{ duration: 1, ease: [ 0.22, 1, 0.36, 1 ] }}
             />
             <motion.div
             initial={{ opacity: 1}}
@@ -31,7 +31,7 @@ const MotionTransition = () => {
             onAnimationComplete={()=> {setAnimationComplete(true)}}
             animate={{
                 opacity: 0,
-                transition: { delay: 0.6, duration: 0.4, ease: "easeInOut"}
+                transition: { delay: 0.2, duration: 0.4, ease: "easeInOut"}
             }}
             className={`h-full w-full fixed bg-black top-0 left-0 z-40 
                 ${animationComplete === false ? "display":"hidden"}`}

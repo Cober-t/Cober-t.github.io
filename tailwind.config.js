@@ -44,12 +44,13 @@ module.exports = {
     			xs: '450px'
     		},
     		fontFamily: {
-    			nodeDescription: 'Montserrat, sans-serif',
-    			nodeTitle: 'Inter, sans-serif',
+    			nodeTitle: 'Montserrat',
+				nodeDescription: 'Montserrat',
     			bodySection: 'Reckless Neue, sans-serif',
     			titleSplash: 'Disclaimer',
     			titleSplashSecond: 'Landasans',
-    			title: 'RobotoCondensed'
+    			title: 'Ignite',
+				tags: 'Landasans'
     		},
     		fontWeight: {
     			thin: '100',

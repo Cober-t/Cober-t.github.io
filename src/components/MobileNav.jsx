@@ -12,12 +12,12 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   function NavColor(path) {
-    let color = "text-white hover:text-red-500"
+    let color = "text-white hover:text-accent"
   
     if (window.location.pathname === path)
-      color = "text-orange hover:text-red-500 text-accent border-b-2 border-accent"
+      color = "hover:text-darkOrange text-accent border-b-2 border-accent hover:border-darkOrange"
     
-    return `${color} capitalize font-medium hover:text-accent transition-all`
+    return `${color} uppercase font-medium transition-all`
   }
 
   return (
@@ -39,20 +39,25 @@ const Navbar = () => {
         >
           <div className="flex flex-col items-center justify-center gap-y-8 w-full h-full 
           uppercase list-none">
-            <div>
-              JORGE <span className="text-accent">PORTFOLIO</span>
+            <div className="font-['Ignite'] text-5xl flex flex-col items-center justify-center">
+              <p>
+                JORGE
+              </p>
+              <p className="text-accent font-['Ignite'] font-medium text-7xl">PORTFOLIO</p>
             </div>
+            <div className="border w-[35vw] fill border-white/20 -mt-5 mb-5"></div>
+
             {links.map((link, index) => (
             <li
                 key={index}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                className={`font-nodeDescription font-medium cursor-pointer text-[16px] ${
                 location.pathname === link.path ? "text-black" : "text-secondary"
                 }`}
                 onClick={() => {
                 setToggle(!toggle);
                 }}
             >
-                <Link to={link.path} key={index} className={`${NavColor(link.path)}`}>
+                <Link to={link.path} key={index} className={`${NavColor(link.path)} text-2xl`}>
                   <h1>{link.name}</h1>
                 </Link>
             </li>

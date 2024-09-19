@@ -13,7 +13,7 @@ export const ProjectContext = createContext()
 const projects = [
     [
         {
-            num: '0.0',
+            num: '00',
             title: "Core",
             description: "A la hora de comenzar un proyecto como el de un motor de videojuegos \
             existen una serie de características fundamentales que beneficia la creción de cualquier videojuego.\
@@ -23,7 +23,7 @@ const projects = [
             github: "",
         },
         {
-            num: '0.1',
+            num: '01',
             title: "Configuración del proyecto y API para la ventana",
             description: "Un conocimiento solico en configuración de proyectos \
             facilitará enormemente añadir librerias y la correcta compilación en \
@@ -35,7 +35,7 @@ const projects = [
             github: "",
         },
         {
-            num: '0.2',
+            num: '02',
             title: "Sistema de 'logging'",
             description: "Imprescindible para comprobar si el funcionamiento es correcto \
             y poder ver la respuesta de eventos y de nuestras interacciones con el motor. \
@@ -45,7 +45,7 @@ const projects = [
             github: "",
         },
         {
-            num: '0.3',
+            num: '03',
             title: "Editor",
             description: "Un editor visual para el motor supone una drástica mejora, permitiendo \
             la creación de herramientas que aceleran y facilitan el de desarrollo de videjuegos.",
@@ -54,7 +54,7 @@ const projects = [
             github: "",
         },
         {
-            num: '0.4',
+            num: '04',
             title: "API para los gráficos",
             description: "Al igual que sucede con la ventana, es importante crear una capa que nos permita \
             mostrar gráficos en ella. Cada sistema operativo gestiona los graficos de diferente forma, pero el motor \
@@ -65,7 +65,7 @@ const projects = [
             github: "",
         },
         {
-            num: '0.5',
+            num: '05',
             title: "Escena de juego y Sistema de Entidades",
             description: "A la hora de diseñar la manera en la que el motor va a gestionar los elementos del juego \
             se ha optado por un sistema de entidades. Todo elemento en el juego (entidad) va a tener una lista \
@@ -77,7 +77,7 @@ const projects = [
             github: "",
         },
         {
-            num: '0.6',
+            num: '06',
             title: "Scripting nativo",
             description: "Gracias a una correcta configuración del proyecto y a las librerías dinámicas, con este sistema \
             podremos programar la lógica del videojuego sin tener que recompilar todo el motor, pudiendo hacer \
@@ -88,7 +88,7 @@ const projects = [
             github: "",
         },
         {
-            num: '0.7',
+            num: '07',
             title: "Launcher para el motor y proyectos",
             description: "Al igual que otros populares motores de videojuegos, un launcher visual facilita la interacción \
             con el motor, sus posibles versiones y la creación y edición de proyectos en desarrollo",
@@ -242,7 +242,8 @@ const Projects = () => {
                         return (
                             <div className="w-full items-center justify-center select-none text-nowrap"
                             onClick={() => {slideTo(0); setProgress(100/projects[index].length)}}>
-                                <p className={`border-white/20 uppercase pt-2.5 pb-2.5 justify-center flex transition-all
+                                <p className={`border-white/20 font-tags tracking-wider text-[32px] font-light
+                                uppercase pt-2.5 pb-2.5 justify-center flex transition-all
                                 ${currentProject === index ? "bg-pink-20 border-l-2 border-t-2 border-b-0 border-r-2" : 
                                     "border-l-0 border-t-0 border-b-2 border-r-0 hover:bg-white/5"}`}
                                 onClick={()=> {setCurrentProject(index)}}>
@@ -259,27 +260,29 @@ const Projects = () => {
                         xl:justify-between order-2 xl:order-none">
                             <div className="flex flex-col gap-[20px] h-[50%]"> 
                                 {/* outline num */}
-                                <div className="text-8xl relative w-fit
+                                <div className="text-8xl relative w-fit font-['Ignite']
                                 text-stroke transition-all duration-300">
                                     {project.num}
                                     <span aria-hidden="true" 
-                                    className="text-outline left-0 absolute text-backgroundColor">
+                                    className="text-outline left-0 absolute text-backgroundColor font-['Ignite']">
                                         {project.num}
                                     </span>
                                 </div>
 
                                 {/* project category */}
-                                <h2 className="text-[42px] font-bold leading-none text-white
+                                <h2 className="text-[62px] font-tags font-bold leading-none text-white
                                 hover:text-accent transition-all duration-300">
                                     {project.title}
                                 </h2>
                                 {/* project description */}
-                                <p className="text-white/60 text-left">{project.description}</p>
+                                <p className="text-white/60 font-semibold text-left font-nodeDescription">
+                                    {project.description}
+                                </p>
                                 {/* stack */}
                                 <ul className="flex gap-4">
                                     {project.stack.map((item, index) => {
                                         return (
-                                            <li key={index} className="text-xl text-accent">
+                                            <li key={index} className="text-2xl font-regular tracking-wider font-tags text-accent">
                                                 {item.name}
                                                 {/* {index !== project.stack.length - 1 && " ,"} */}
                                             </li>

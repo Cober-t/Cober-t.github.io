@@ -118,11 +118,27 @@
 }
 
 @font-face {
-    font-family: 'RobotoCondensed';
-    src: url('fonts/Deutschlander-O5we.ttf') format('truetype');
+    font-family: 'Ignite';
+    src: url('fonts/Ignite.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Landasans';
+    src: url('fonts/Landasans-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* .pattern {
 	background-color: #1c1b22;

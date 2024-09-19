@@ -14,32 +14,20 @@ const experience = {
     {
         company: "La Tribuna de Toledo",
         position: "Maquetación",
-        duration: "June 2018 - September 2018"
+        duration: "June 2018 - September 2018",
+        image: "",
     },
     {
         company: "PenduloStudios2",
         position: "Tools & IT",
-        duration: "March 2023 - April 2024"
+        duration: "March 2023 - April 2024",
+        image: "",
     },
     {
         company: "La Tribuna de Toledo",
         position: "Maquetación",
-        duration: "June 2018 - September 2018"
-    },
-    {
-        company: "PenduloStudios2",
-        position: "Tools & IT",
-        duration: "March 2023 - April 2024"
-    },
-    {
-        company: "La Tribuna de Toledo",
-        position: "Maquetación",
-        duration: "June 2018 - September 2018"
-    },
-    {
-        company: "PenduloStudios2",
-        position: "Tools & IT",
-        duration: "March 2023 - April 2024"
+        duration: "June 2018 - September 2018",
+        image: "",
     },
     ],
 }
@@ -134,8 +122,8 @@ const Experience = () => {
                         {tabs.map((tab, index) => {
                             return <button key={index}
                             className={`border-white/20 p-3 justify-center items-center transition-all
-                            inline-flex w-full text-base whitespace-nowrap font-medium
-                            ${index === currentTab ? "bg-pink-20 border-b-2 border-t-2 border-r-0 border-l-0 xl:border-l-2" : 
+                            inline-flex w-full tracking-wider whitespace-nowrap font-tags text-2xl font-medium uppercase
+                            ${index === currentTab ? "bg-pink-20 border-b-2 border-t-2 border-r-0 border-l-0 xl:border-l-2 hover:bg-black hover:opacity-60" : 
                             "border-b-0 border-t-0 border-r-2 border-l-2 xl:border-l-0 hover:bg-white/5"}`}
                             onClick={()=>{setCurrentTab(index)}}>
                                 {tab}
@@ -148,25 +136,27 @@ const Experience = () => {
                         {/* experience */}
                         {currentTab === 0 && <div className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">{experience.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                <h3 className="text-5xl font-bold font-nodeTitle uppercase">{experience.title}</h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 font-medium">
                                     {experience.description}
                                 </p>
-                                <div className="h-[400px] xl:overflow-y-scroll scroll">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                <div className="h-[600px] xl:overflow-y-scroll scroll">
+                                    <ul className="grid grid-cols-1 gap-[30px]">
                                         {experience.items.map((item, index) => {
                                             return (
                                                 <li key={index}
-                                                className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
+                                                className="bg-[#232329] h-[220px] py-6 px-10
                                                 flex flex-col justify-center items-center lg:items-start gap-1">
-                                                   <span className="text-accent">{item.duration}</span> 
-                                                   <h3 className="text-xl max-w-[260px] min-h-[60px]
+                                                   <span className="text-accent font-tags text-2xl font-medium">
+                                                        {item.duration}
+                                                    </span> 
+                                                   <h3 className="text-xl min-h-[60px] font-medium
                                                    text-center lg:text-left">
                                                         {item.position}
                                                     </h3>
                                                    <div className="flex items-center gap-3">
-                                                    <span className="w-[6px] h-[6px] rounded-full bg-accent" />
-                                                    <p className="text-white/60">{item.company}</p>
+                                                    <span className="w-[6px] h-[6px] bg-accent" />
+                                                    <p className="text-white/60 font-medium">{item.company}</p>
                                                    </div>
                                                 </li>
                                             )
@@ -179,25 +169,25 @@ const Experience = () => {
                         {/* education */}
                         {currentTab === 1 && <div className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">{education.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                <h3 className="text-5xl font-bold font-nodeTitle uppercase">{education.title}</h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 font-medium">
                                     {education.description}
                                 </p>
-                                <div className="h-[400px] xl:overflow-y-scroll scroll">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                <div className="h-fit">
+                                    <ul className="grid grid-cols-1 gap-[30px]">
                                         {education.items.map((item, index) => {
                                             return (
                                                 <li key={index}
-                                                className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
+                                                className="bg-[#232329] h-[184px] py-6 px-10
                                                 flex flex-col justify-center items-center lg:items-start gap-1">
-                                                   <span className="text-accent">{item.duration}</span> 
-                                                   <h3 className="text-xl max-w-[260px] min-h-[60px]
+                                                   <span className="text-accent font-tags text-2xl font-medium">{item.duration}</span> 
+                                                   <h3 className="text-xl min-h-[60px] font-medium
                                                    text-center lg:text-left">
                                                         {item.degree}
                                                     </h3>
                                                    <div className="flex items-center gap-3">
-                                                    <span className="w-[6px] h-[6px] rounded-full bg-accent" />
-                                                    <p className="text-white/60">{item.institution}</p>
+                                                    <span className="w-[6px] h-[6px] bg-accent" />
+                                                    <p className="text-white/60 font-medium">{item.institution}</p>
                                                    </div>
                                                 </li>
                                             )
@@ -211,8 +201,8 @@ const Experience = () => {
                         {currentTab === 2 && <div className="w-full h-full">
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                    <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                    <h3 className="text-5xl font-bold font-nodeTitle uppercase">{skills.title}</h3>
+                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 font-medium">
                                         {skills.description}
                                     </p>
                                 </div>
@@ -221,13 +211,13 @@ const Experience = () => {
                                 items-center justify-center text-center">
                                     {skills.items.map((skill, index) => {
                                         return <li key={index}>
-                                            <div className="w-full h-[150px] bg-[#232329] rounded-xl flex
+                                            <div className="w-full h-[150px] bg-[#232329] flex
                                             items-center justify-end pb-5 flex-col gap-[12px]">
                                                 <div className="text-6xl hover:text-accent
                                                 transition-all duration-300"> 
                                                     {skill.icon} 
                                                 </div>
-                                                <p className="capitalize">{skill.name}</p>
+                                                <p className="font-medium uppercase">{skill.name}</p>
                                             </div>
                                         </li>
                                     })}
@@ -238,10 +228,8 @@ const Experience = () => {
                         {/* about me */}
                         {currentTab === 3 && <div className="w-full text-center xl:text-left">
                             <div className="flex flex-col gap-[30px] select-none">
-                                <h3 className="text-4xl font-bold">
-                                    {about.title}
-                                </h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                <h3 className="text-5xl font-bold font-nodeTitle uppercase">{about.title}</h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 font-medium">
                                     {about.description}
                                 </p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
@@ -249,8 +237,10 @@ const Experience = () => {
                                     {about.items.map((item, index) => {
                                         return <li key={index} className="flex items-center justify-center
                                         xl:justify-start gap-4">
-                                            <span className="text-white/60">{item.fieldName}</span>
-                                            <span className="text-xl">{item.fieldValue}</span>
+                                            <span className="text-white/60 font-medium font-tags text-3xl capitalize">
+                                            {item.fieldName}
+                                            </span>
+                                            <span className="text-xl capitalize font-medium">{item.fieldValue}</span>
                                         </li>
 
                                     })}
