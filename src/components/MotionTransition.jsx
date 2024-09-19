@@ -8,6 +8,7 @@ const MotionTransition = () => {
     const [animationComplete, setAnimationComplete] = useState(false)
 
     return (
+        <>
         <div key={location.pathname}>
             <motion.div
             className="fixed z-50 top-0 left-0 w-full h-full outline-none bg-orange origin-left"
@@ -34,8 +35,12 @@ const MotionTransition = () => {
             }}
             className={`h-full w-full fixed bg-black top-0 left-0 z-40 
                 ${animationComplete === false ? "display":"hidden"}`}
-            />
+                />
         </div>
+{/* 
+        <div className="fixed top-0 w-full h-screen z-[-100] pattern">
+        </div> */}
+        </>
     )
 }
 

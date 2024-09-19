@@ -130,14 +130,13 @@ const Experience = () => {
             className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:px-24">
 
                 <div className="container mx-auto flex flex-col xl:flex-row gap-[60px]">
-                    <div className="flex flex-col w-full max-w-[380px] mx-auto gap-6">
+                    <div className="flex flex-col w-full max-w-[380px] mx-auto">
                         {tabs.map((tab, index) => {
                             return <button key={index}
-                            className={`rounded-xl p-3 justify-center items-center transition-all
+                            className={`border-white/20 p-3 justify-center items-center transition-all
                             inline-flex w-full text-base whitespace-nowrap font-medium
-                            ${index === currentTab ? 
-                            "bg-accent text-backgroundColor font-bold shadow-sm" : 
-                            "opacity-50 text-white bg-[#27272c]"}`}
+                            ${index === currentTab ? "bg-pink-20 border-b-2 border-t-2 border-r-0 border-l-0 xl:border-l-2" : 
+                            "border-b-0 border-t-0 border-r-2 border-l-2 xl:border-l-0 hover:bg-white/5"}`}
                             onClick={()=>{setCurrentTab(index)}}>
                                 {tab}
                             </button>

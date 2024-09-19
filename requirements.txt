@@ -9,6 +9,7 @@ npm install --legacy-peer-deps eslint-plugin-react-hooks
 npm install --legacy-peer-deps react-player
 npm install r3f-perf (monitoring)
 npm install react-query
+npm install swiper
 
 
 #       MILESTONES

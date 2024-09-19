@@ -8,6 +8,7 @@ const pathUnity = "src/assets/toolUnity.json"
 import logo from "./assets/icons/logo.svg"
 import menu from "./assets/icons/menu.svg"
 import close from "./assets/icons/close.svg"
+import downloadCV from "./assets/alicia.pdf"
 
 const links = [
     {
@@ -33,6 +34,7 @@ export {
     logo,
     menu,
     close,
+    downloadCV,
     links,
     pathGameEngine,
     pathPython,

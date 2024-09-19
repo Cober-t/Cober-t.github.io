@@ -11,30 +11,18 @@ const ProjectSlideButtons = ({ containerStyles, btnStyles, iconsStyles, projectS
     return (
         <div className={containerStyles}>
             <button className={btnStyles} onClick={()=> {
-                if  (swiper.activeIndex - 1 < 0)
-                {
+                if  (swiper.activeIndex === 0)
                     swiper.slideTo(projectSize - 1)
-                    setProgress(100)
-                }
                 else
-                {
                     swiper.slidePrev()
-                    setProgress(100 / projectSize * swiper.activeIndex + 100 / projectSize)
-                }
             }}>
                <PiCaretLeftBold className={iconsStyles}/>
             </button>
             <button className={btnStyles} onClick={()=> {
                 if  (swiper.activeIndex + 1 >= projectSize)
-                {
                     swiper.slideTo(0)
-                    setProgress(100 / projectSize)
-                }
                 else
-                {
                     swiper.slideNext()
-                    setProgress(100 / projectSize * swiper.activeIndex + 100 / projectSize)
-                }
             }}>
                <PiCaretRightBold className={iconsStyles}/>
             </button>

@@ -25,7 +25,7 @@ module.exports = {
     			orange: '#EF821E',
     			darkOrange: 'rgba(193, 78, 47, 1)',
     			toolBGColor: 'rgba(0, 0, 0, 1)',
-    			backgroundColor: 'rgba(30, 30, 30, 1)',
+    			backgroundColor: 'rgba(28, 27, 34, 1)',
     			contactColor: 'rgba(49, 49, 49, 1)'
     		},
     		cursor: {
