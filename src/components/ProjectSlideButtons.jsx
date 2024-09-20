@@ -1,12 +1,9 @@
 import { useSwiper } from "swiper/react"
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi"
-import { useContext } from "react"
-import { ProjectContext } from "./Projects"
 
 const ProjectSlideButtons = ({ containerStyles, btnStyles, iconsStyles, projectSize }) => {
 
     const swiper = useSwiper()
-    const {setProgress} = useContext(ProjectContext)
 
     return (
         <div className={containerStyles}>

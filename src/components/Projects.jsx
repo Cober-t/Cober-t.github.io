@@ -8,8 +8,6 @@ import ProjectSlideButtons from "./ProjectSlideButtons.jsx"
 import { Link } from "react-router-dom"
 import "swiper/css"
 
-export const ProjectContext = createContext()
-
 const projects = [
     [
         {
@@ -198,8 +196,6 @@ const Projects = () => {
     const [currentProject, setCurrentProject] = useState(0)
     const [swiper, setSwiper] = useState(null)
 
-    const [slideIndex, setSlideIndex] = useState(0);
-
 
     const slideTo = (index) => swiper.slideTo(index)
 
@@ -322,15 +318,13 @@ const Projects = () => {
                                         </SwiperSlide>
                                     )
                                 })}
-                                <ProjectContext.Provider value={{setProgress}}>
-                                    <ProjectSlideButtons containerStyles="flex gap-2 absolute right-0 
-                                    bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between
-                                    xl:w-max xl:justify-none"
-                                    projectSize={projects[currentProject].length}
-                                    btnStyles="bg-accent hover:bg-accent-hover text-primary
-                                    text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-                                    />
-                                </ProjectContext.Provider>
+                                <ProjectSlideButtons containerStyles="flex gap-2 absolute right-0 
+                                bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between
+                                xl:w-max xl:justify-none"
+                                projectSize={projects[currentProject].length}
+                                btnStyles="bg-accent hover:bg-accent-hover text-primary
+                                text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                                />
                             </Swiper>
 
                             <motion.div 
