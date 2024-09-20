@@ -55,16 +55,20 @@ const Contact = () => {
 	return (
 		<>
 		<MotionTranstion />
-		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden`}>
+		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden mt-24`}>
 
-			<h3 className={`text-[100px] xl:text-[130px] font-tags flex flex-col items-center mb-10`}>
+			<h3 className={`text-6xl hover:text-accent xl:text-8xl font-tags flex flex-col items-center`}>
 				CONTACT ME
 			</h3>
+			<p className="flex text-accent justify-center  mb-10 font-medium text-md">
+				jorgetejadolopez@gmail.com
+			</p>
+
 
 			<form
 				ref={formRef}
 				onSubmit={handleSubmit}
-				className="mb-10 text-white/50 text-[18px]"
+				className="mb-10 text-white/50"
 			>
 				<label className="flex flex-col mb-10 ml-10 translate-x-[15vw] xl:translate-x-[30vw]">
 					<div className="h-[3rem] w-0.5 bg-white/50 ">

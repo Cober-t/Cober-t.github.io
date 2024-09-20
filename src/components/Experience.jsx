@@ -236,7 +236,7 @@ const Experience = () => {
                                 flex text-4xl font-medium uppercase justify-center">
                                     Languages
                                 </p>
-                                <Swiper spaceBetween={10} slidesPerView={3} loop={true} navigation={true}
+                                <Swiper spaceBetween={10} slidesPerView={4} loop={true} navigation={true}
                                 className="h-[200px] xl:w-[1000px] w-full select-none">
                                     {skills.items.map((skill, index) => {
                                         return <SwiperSlide key={index} className="w-full">
@@ -288,7 +288,7 @@ const Experience = () => {
                                 flex text-4xl font-medium uppercase justify-center">
                                     Softwares
                                 </p>
-                                <Swiper spaceBetween={10} slidesPerView={3} loop={true} navigation={true}
+                                <Swiper spaceBetween={10} slidesPerView={4} loop={true} navigation={true}
                                 className="h-[200px] xl:w-[1000px] w-full select-none">
                                     {skills.items.map((skill, index) => {
                                         return <SwiperSlide key={index} className="w-full">
