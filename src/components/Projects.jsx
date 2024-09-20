@@ -245,7 +245,7 @@ const Projects = () => {
                                 <p className={`border-white/20 font-tags tracking-wider text-[32px] font-light
                                 uppercase pt-2.5 pb-2.5 justify-center flex transition-all
                                 ${currentProject === index ? "bg-pink-20 border-l-2 border-t-2 border-b-0 border-r-2" : 
-                                    "border-l-0 border-t-0 border-b-2 border-r-0 hover:bg-white/5"}`}
+                                    "border-l-0 border-t-0 border-b-2 border-r-0 text-accent hover:bg-white/5"}`}
                                 onClick={()=> {setCurrentProject(index)}}>
                                     {projectNode}
                                 </p>
@@ -282,7 +282,7 @@ const Projects = () => {
                                 <ul className="flex gap-4">
                                     {project.stack.map((item, index) => {
                                         return (
-                                            <li key={index} className="text-2xl font-regular tracking-wider font-tags text-accent">
+                                            <li key={index} className="text-3xl font-regular tracking-wider font-tags text-accent">
                                                 {item.name}
                                                 {/* {index !== project.stack.length - 1 && " ,"} */}
                                             </li>
@@ -344,15 +344,6 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* <motion.div 
-                key={progress}
-                initial={{width: `${lastProgressValue}%`}}
-                animate={{width: `${progress}%`}}
-                onAnimationComplete={()=> {setLastProgressValue(progress)}}
-                transition={{duration:0.75, ease:"easeInOut"}}
-                className={`bg-orange h-[5px] justify-self-center items-center`}>
-                </motion.div> */}
 
             </motion.div>
         </>

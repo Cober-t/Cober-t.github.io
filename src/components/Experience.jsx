@@ -1,6 +1,7 @@
 import MotionTranstion from "./MotionTransition.jsx"
 import {motion} from "framer-motion"
 import { useState } from "react"
+import { BsSteam } from "react-icons/bs"
 import { FaCss3, FaHtml5, FaReact } from "react-icons/fa"
 
 const tabs = [ "Experience", "Education", "Skills", "About Me"]
@@ -15,19 +16,22 @@ const experience = {
         company: "La Tribuna de Toledo",
         position: "Maquetación",
         duration: "June 2018 - September 2018",
-        image: "",
+        image: null,
+        link: "",
     },
     {
-        company: "PenduloStudios2",
+        company: "FIRESCALE Studios",
+        position: "VFX & UI designer internship",
+        duration: "February 2022 - April 2022",
+        image: "./riseOfTheOverlords.jpg",
+        link: "",
+    },
+    {
+        company: "Pendulo Studios",
         position: "Tools & IT",
         duration: "March 2023 - April 2024",
-        image: "",
-    },
-    {
-        company: "La Tribuna de Toledo",
-        position: "Maquetación",
-        duration: "June 2018 - September 2018",
-        image: "",
+        image: "./tintin.jpg",
+        link: "",
     },
     ],
 }
@@ -124,7 +128,7 @@ const Experience = () => {
                             className={`border-white/20 p-3 justify-center items-center transition-all
                             inline-flex w-full tracking-wider whitespace-nowrap font-tags text-2xl font-medium uppercase
                             ${index === currentTab ? "bg-pink-20 border-b-2 border-t-2 border-r-0 border-l-0 xl:border-l-2 hover:bg-black hover:opacity-60" : 
-                            "border-b-0 border-t-0 border-r-2 border-l-2 xl:border-l-0 hover:bg-white/5"}`}
+                            "border-b-0 border-t-0 border-r-2 border-l-2 text-accent xl:border-l-0 hover:bg-white/5"}`}
                             onClick={()=>{setCurrentTab(index)}}>
                                 {tab}
                             </button>
@@ -145,19 +149,37 @@ const Experience = () => {
                                         {experience.items.map((item, index) => {
                                             return (
                                                 <li key={index}
-                                                className="bg-[#232329] h-[220px] py-6 px-10
-                                                flex flex-col justify-center items-center lg:items-start gap-1">
-                                                   <span className="text-accent font-tags text-2xl font-medium">
-                                                        {item.duration}
-                                                    </span> 
-                                                   <h3 className="text-xl min-h-[60px] font-medium
-                                                   text-center lg:text-left">
-                                                        {item.position}
-                                                    </h3>
-                                                   <div className="flex items-center gap-3">
-                                                    <span className="w-[6px] h-[6px] bg-accent" />
-                                                    <p className="text-white/60 font-medium">{item.company}</p>
-                                                   </div>
+                                                style={{'--image-url': `url(${item.image})`}}
+                                                className={`bg-[#232329] h-fit xl:h-[220px] py-6 px-10 flex flex-col 
+                                                justify-center items-center lg:items-start gap-1 xl:bg-[image:var(--image-url)] bg-bottom xl:bg-right bg-contain bg-no-repeat`}>
+                                                    <div 
+                                                    className="w-full flex xl:flex-row flex-col items-center justify-center sm:justify-between">
+                                                        <div>
+                                                            <span className="text-accent font-tags text-2xl font-medium">
+                                                                    {item.duration}
+                                                                </span> 
+                                                            <h3 className="text-xl min-h-[60px] font-medium
+                                                            text-center lg:text-left">
+                                                                    {item.position}
+                                                                </h3>
+                                                            <div className="flex items-center gap-3 xl:mb-0 mb-5">
+                                                                <span className="w-[6px] h-[6px] bg-accent" />
+                                                                <p className="text-white/60 font-medium">{item.company}</p>
+                                                            </div>
+                                                        </div>
+                                                        {
+                                                            item.image !== null && 
+                                                            <div>
+                                                                <img src={item.image} alt="jghvu"
+                                                                className="w-[300px] xl:w-0 bg-center"/>
+                                                                <div className="xl:translate-y-14 -translate-y-12 xl:translate-x-0 translate-x-80 
+                                                                w-[50px] h-[50px] rounded-full bg-white/5 flex items-center
+                                                                justify-center hover:text-accent text-white">
+                                                                    <BsSteam className="text-3xl"/>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                    </div>
                                                 </li>
                                             )
                                         })}

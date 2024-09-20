@@ -1,4 +1,5 @@
 import { downloadCV } from "../constants";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -17,14 +18,26 @@ const Hero = () => {
               I develop 3D visuals, user interfaces and web applications
             </p>
 
-            <div className="flex flex-col xl:flex-row items-center gap-8 transition-all
-            hover:bg-yellow-100">
-                <a href={downloadCV} download="curriculum"
-                className="outline rounded-sm uppercase flex items-center font-tags text-2xl tracking-wider font-thin
-                outline-2 p-2 outline-darkOrange text-accent select-none">
-                  Download CV
-                </a>
+            <div className="w-full flex flex-col xl:flex-row items-center justify-center gap-x-10">
+              <div className="flex flex-col xl:flex-row items-center gap-8 transition-all
+              hover:bg-yellow-100 xl:mb-0 mb-6">
+                  <a href={downloadCV} download="curriculum"
+                  className="outline w-[120px] uppercase justify-center flex items-center font-tags text-2xl tracking-wider font-thin
+                  outline-2 p-2 outline-darkOrange text-accent select-none">
+                    Download CV
+                  </a>
+              </div>
+
+              <div className="flex flex-col xl:flex-row items-center gap-8 transition-all
+              hover:bg-yellow-100">
+                  <Link to="/contact"
+                  className="outline w-[120px] uppercase justify-center flex items-center font-tags text-2xl tracking-wider font-thin
+                  outline-2 p-2 outline-darkOrange text-accent select-none">
+                    Contact Me
+                  </Link>
+              </div>
             </div>
+
           </div>
       </div>
     </div>
