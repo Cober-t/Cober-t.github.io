@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { links } from "../constants.jsx"
+import { links } from "../../constants.jsx"
 
 
 const Nav = () => {
@@ -32,7 +32,7 @@ const Nav = () => {
     }, []);
 
     
-    return <nav className={`flex gap-16 flex-row ${scrolled ? "bg-primary" : "bg-transparent"}`}>
+    return <nav className={`flex gap-16 flex-row select-none ${scrolled ? "bg-primary" : "bg-transparent"}`}>
         {links.map((link, index)=> {
             return (
             <Link to={link.path} key={index} className={`${NavColor(link.path)}`}>

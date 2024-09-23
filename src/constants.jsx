@@ -16,18 +16,380 @@ const links = [
         path: "/",
     },
     {
-        name:"experience",
+        name:"Experiencia",
         path: "/experience",
     },
     {
-        name:"projects",
+        name:"Proyectos",
         path: "/projects",
     },
     {
-        name:"contact",
+        name:"Contacto",
         path: "/contact",
     }
 ]
+
+
+const projects = [
+    [
+        {
+            num: '00',
+            title: "Core",
+            description: "A la hora de comenzar un proyecto como el de un motor de videojuegos \
+            existen una serie de características fundamentales que beneficia la creción de cualquier videojuego.\
+            A continuación explico el desarrollo de dichas características a través de proyectos terminados.",
+            stack: [{name: "C++"}],
+            image: "./unity/parallaxImage.jpg",
+            github: "",
+        },
+        {
+            num: '01',
+            title: "Configuración del proyecto y API para la ventana",
+            description: "Un conocimiento solico en configuración de proyectos \
+            facilitará enormemente añadir librerias y la correcta compilación en \
+            diferentes entornos. Es importante también la programación de una capa \
+            que permita hacer funcionar la ventana y nuestras interacción con ella \
+            a través de nuestros periféricos en cualquier Sistema Operativo.",
+            stack: [{name: "CMake"}, {name: "glfw"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '02',
+            title: "Sistema de 'logging'",
+            description: "Imprescindible para comprobar si el funcionamiento es correcto \
+            y poder ver la respuesta de eventos y de nuestras interacciones con el motor. \
+            Los mensajes se almacenan y se eliminan de manera eficiente en memoria.",
+            stack: [{name: "Debug"}, {name: "spdlog"}],
+            image: "./unity/parallaxImage.jpg",
+            github: "",
+        },
+        {
+            num: '03',
+            title: "Editor",
+            description: "Un editor visual para el motor supone una drástica mejora, permitiendo \
+            la creación de herramientas que aceleran y facilitan el de desarrollo de videjuegos.",
+            stack: [{name: "ImGui"}, {name: "Immediate Mode"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '04',
+            title: "API para los gráficos",
+            description: "Al igual que sucede con la ventana, es importante crear una capa que nos permita \
+            mostrar gráficos en ella. Cada sistema operativo gestiona los graficos de diferente forma, pero el motor \
+            debe estar preparado para que no sea dificil añadir más capacidades gráficas en un futuro. \
+            El motor usa OpenGL porque funciona en un gran número de plataformas diferentes.",
+            stack: [{name: "OpenGL"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '05',
+            title: "Escena de juego y Sistema de Entidades",
+            description: "A la hora de diseñar la manera en la que el motor va a gestionar los elementos del juego \
+            se ha optado por un sistema de entidades. Todo elemento en el juego (entidad) va a tener una lista \
+            de componentes: posición, físicas, texturas, etc. que a su vez forman sistemas propios. \
+            Una escena del juego recorre estos sistermas y a su vez todas las entidades que pertencen a estos, \
+            haciendo que el procesamiento sea muy rápido al evitar repeticiones innecesarias y busquedas en memoria muy largas",
+            stack: [{name: "entt"}, {name: "Gestión de memoria"}, {name: "Estructuras de datos"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '06',
+            title: "Scripting nativo",
+            description: "Gracias a una correcta configuración del proyecto y a las librerías dinámicas, con este sistema \
+            podremos programar la lógica del videojuego sin tener que recompilar todo el motor, pudiendo hacer \
+            cambios y desarrollar el juego mientras el motor está en ejecución. Aunque no es una característica imprescindible \
+            si que facilita enormenente el desarrollo, y es sistema que podemos encontrar en todos los motores populares",
+            stack: [{name: "C++"}, {name: "Dll"}, {name: "Scripting Nativo"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '07',
+            title: "Launcher para el motor y proyectos",
+            description: "Al igual que otros populares motores de videojuegos, un launcher visual facilita la interacción \
+            con el motor, sus posibles versiones y la creación y edición de proyectos en desarrollo",
+            stack: [{name: "Qt"}, {name: "Python"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '1',
+            title: "Pong",
+            description: "Para poder desarrollar este primer proyecto era necesario implementar nuevas funcionalidades en el motor \
+            que usaran como base para los siguientes, estas son: simulación de físicas en 2D para la colisión de \
+            la pelota con las palas de los jugadores, un sistema de audio que permita reproducir diferentes sonidos cuando \
+            ciertos eventos ocurran y un sistema de cámaras que permita modificar facilmente aspectos como la resolución, el zoom, \
+            la posición y ángulo de la cámara o la relación de aspecto",
+            stack: [{name: "box2d"}, {name: "miniaudio"}, {name: "Cámara virtual"}],
+            image: "./myGameEngine/Pong.png",
+            github: "",
+        },
+        {
+            num: '2',
+            title: "Flappy Bird",
+            description: "En este proyecto se implementa la carga de texturas, con las que a su vez \
+            podremos dibujar texto en pantalla. La serialización de datos, que permite guardar y cargar escenas, \
+            imprescindible para la persistencia de datos en un videojuego y para evitar empezar desde una escena vacía \
+            en el desarrollo de un proyecto. Otra sustancial mejora que nos permite la serialización de datos es \
+            la creción de 'prefabs', entidades completas que podremos guardar \
+            editar, duplicar, siempre atendiendo al uso de memoria y las estructuras de datos.",
+            stack: [{name: "Texturas y texto"}, {name: "Serialización de datos"}, {name: "Prefabs"}],
+            image: "./myGameEngine/FlappyBird.png",
+            github: "",
+        },
+        {
+            num: '3',
+            title: "Breakout",
+            description: "Este proyecto hace un uso intensivo de las texturas, y para gestionarlas de manera correcta existen técnicas \
+            muy utilizadas como la del 'atlas de textura': una única textura agrupará todas las que se usen en el juego, \
+            disponiendo de ellas a través de índices o coordenadas. Todas se dibujan a la vez, ahorrando procesamiento \
+            y memoria gráfica, lo que nos permite desarrollar herramientas como el sistema de partículas, \
+            con el que podremos editar los atributos de las miles de texturas que se van a dibujar",
+            stack: [{name: "Atlas de texturas"}, {name: "Sistema de partículas"}, {name: "Flujo jugable"}],
+            image: "./myGameEngine/Breakout.png",
+            github: "",
+        },
+    ],
+    [
+        {
+            num: '01',
+            title: "Generador de terreno aleatorio",
+            description: "asdassaddd asda dasda adas asd asd",
+            stack: [{name: "React"}, {name: "C++"}, {name: "Particle System"}],
+            image: "./unity/parallaxImage.jpg",
+            github: "",
+        },
+        {
+            num: '02',
+            title: "Sistema de diálogo",
+            description: "asdassaddd asda dasda adas asd asd",
+            stack: [{name: "React"}, {name: "C++"}, {name: "Particle System"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+    ],
+    [
+        {
+            num: '01',
+            title: "Validador de modelos y animaciones para importar a Unreal Engine",
+            description: "asdassaddd asda dasda adas asd asd",
+            stack: [{name: "Qt"}, {name: "Pyside"}, {name: "Maya"}, {name: "Blender"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '02',
+            title: "Servidor para validar nomenclaturas de archivos",
+            description: "asdassaddd asda dasda adas asd asd",
+            stack: [{name: "Redes"}, {name: "Expresiones regulares (regex)"}],
+            image: "./myGameEngine/parallaxImage.png",
+            github: "",
+        },
+        {
+            num: '03',
+            title: "Gestión de Apps a través de Telegram",
+            description: "asdassaddd asda dasda adas asd asd",
+            stack: [{name: "RaspberryPi"}, {name: "Todoist"}, {name: "Notion"}, {name: "Obsidian"}],
+            image: "./unity/parallaxImage.jpg",
+            github: "",
+        },
+        {
+            num: '04',
+            title: "Launcher para proyectos del motor de videojuegos",
+            description: "asdassaddd asda dasda adas asd asd",
+            stack: [{name: "Qt"}, {name: "UI"}],
+            image: "./unity/parallaxImage.jpg",
+            github: "",
+        },
+    ],
+]
+const projectsName = ["Game Engine", "Unity", "Python"]
+
+
+const tabs = [ "Experiencia", "Estudios", "Habilidades", "Sobre mi"]
+
+const experience = {
+    icon: "",
+    title: "Mi Experiencia",
+    description: "asdasdad ada da asdad asdasd daa",
+    items: [
+    {
+        company: "La Tribuna de Toledo",
+        position: "Maquetación",
+        duration: "June 2018 - September 2018",
+        image: null,
+        link: "",
+    },
+    {
+        company: "FIRESCALE Studios",
+        position: "VFX & UI designer internship",
+        duration: "February 2022 - April 2022",
+        image: "",
+        link: "",
+    },
+    {
+        company: "Pendulo Studios",
+        position: "Tools & IT",
+        duration: "March 2023 - April 2024",
+        image: "",
+        link: "",
+    },
+    ],
+}
+
+const education = {
+
+    icon: "",
+    title: "Mis Estudios",
+    description: "asdasdad ada da asdad asdasd daa",
+    items: [
+    {
+        institution: "María Zambrano I.E.S.",
+        degree: "Bachillerato de Ciencias y Tecnologías",
+        duration: "2014-2016"
+    },
+    {
+        institution: "Escuela de artes de Toledo",
+        degree: "Ilustración",
+        duration: "2016-2018"
+    },
+    {
+        institution: "Universitat Jaume I",
+        degree: "Diseño y desarrollo de videojuegos",
+        duration: "2018-222"
+    },
+    ],
+}
+
+import { FaReact, FaPython } from "react-icons/fa"
+import { BsUnity } from "react-icons/bs"
+import { SiAndroidstudio, SiAutodeskmaya, SiCsharp, SiCplusplus, SiDotnet,
+    SiGodotengine, SiKotlin, SiQt, SiUnrealengine } from "react-icons/si"
+import { DiIllustrator, DiJavascript, DiPhotoshop } from "react-icons/di"
+import { BiLogoBlender } from "react-icons/bi"
+
+const skills = {
+    icon: "",
+    title: "Mis Habilidades",
+    description: "",
+    languages: [
+        {
+            icon: <FaPython />,
+            name: "Python",
+            level: "Avanzado",
+        },
+        {
+            icon: <SiCplusplus  />,
+            name: "C++",
+            level: "Avanzado",
+        },
+        {
+            icon: <SiCsharp />,
+            name: "C#",
+            level: "Intermedio",
+        },
+        {
+            icon: <DiJavascript />,
+            name: "JavaScript",
+            level: "Princiante",
+        },
+        {
+            icon: <SiKotlin />,
+            name: "Kotlin",
+            level: "Princiante",
+        }
+    ],
+    frameworks: [
+        {
+            icon: <FaReact />,
+            name: "React Native",
+            level: "Advanced",
+        },
+        {
+            icon: <SiQt />,
+            name: "Qt",
+            level: "Intermedio",
+        },
+        {
+            icon: <SiDotnet />,
+            name: ".Net",
+            level: "Intermedio",
+        }
+    ],
+    softwares: [
+        {
+            icon: <SiUnrealengine />,
+            name: "Unreal Engine",
+            level: "Avanzado",
+        },
+        {
+            icon: <SiGodotengine />,
+            name: "Unreal Engine",
+            level: "Intermedio",
+        },
+        {
+            icon: <BsUnity />,
+            name: "Unity",
+            level: "Avanzado",
+        },
+        {
+            icon: <DiPhotoshop />,
+            name: "Photoshop",
+            level: "Intermedio",
+        },
+        {
+            icon: <DiIllustrator />,
+            name: "Illustrator",
+            level: "Intermedio",
+        },
+        {
+            icon: <SiAndroidstudio />,
+            name: "Android Studio",
+            level: "Intermedio",
+        },
+        {
+            icon: <SiAutodeskmaya />,
+            name: "Maya",
+            level: "Intermedio",
+        },
+        {
+            icon: <BiLogoBlender />,
+            name: "Blender",
+            level: "Avanzado",
+        },
+    ]
+}
+
+const about = {
+    icon: "",
+    title: "Sobre mi",
+    description: "Me considero una persona apasionada, perfeccionista y que \
+    busco siempre la crítica, la cual considero es la mejor forma de mejorar.\
+    Me encantan los nuevos retos, y los afronto siempre con ganas de aprender y \
+    de hacerlo lo mejor posible.",
+    items: [
+        // {
+        //     fieldName: "Linkedin",
+        //     fieldValue: "www.linkedin.com/in/jorge-tejado-lópez",
+        // },
+        {
+            fieldName: "Nombre",
+            fieldValue: "Jorge Tejado López",
+        },
+        {
+            fieldName: "Idiomas",
+            fieldValue: "Español, Ingles",
+        },
+        {
+            fieldName: "Email",
+            fieldValue: "jorgetejadolopez@gmail.com",
+        },
+    ]
+}
 
 
 export {
@@ -35,6 +397,12 @@ export {
     menu,
     close,
     downloadCV,
+
+    about, experience, education, skills, tabs,
+
+    projects,
+    projectsName,
+
     links,
     pathGameEngine,
     pathPython,

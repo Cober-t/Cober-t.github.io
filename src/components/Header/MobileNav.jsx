@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import { menu, close } from "../constants.jsx"
+import { menu, close, links } from "../../constants.jsx"
 import { motion } from "framer-motion"
-import { links } from "../constants.jsx"
 import IconSVG from "./IconSVG.jsx"
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
