@@ -29,7 +29,6 @@ const links = [
     }
 ]
 
-
 const projects = [
     [
         {
@@ -158,16 +157,24 @@ const projects = [
         {
             num: '01',
             title: "Generador de terreno aleatorio",
-            description: "asdassaddd asda dasda adas asd asd",
-            stack: [{name: "React"}, {name: "C++"}, {name: "Particle System"}],
+            description: "Haciendo uso del algoritmo 'Perlin Noise' se desarrolló este generador de terreno para juegos \
+            del tipo RTS (Real-Time Strategy). A través de la interfáz de Unity se pueden modificar todas las variables \
+            de este algoritmo y generar un terreno con un solo click pudiendo ver el resultado rápidamente en tiempo real. \
+            También se pretendía que, una vez generado este terreno, fuese totalmente personalizable, tanto en el arte como en \
+            cuanto a la lógica del videojuego, pudiendo añadir tipos de terreno, asignar imagenes a estos o incluso \
+            añadir atributos como vida si se tratase de un enemigo, dificultad de terreno para relantizar al jugador, etc. ",
+            stack: [{name: "C#"}, {name: "Perlin Noise"}],
             image: "./unity/parallaxImage.jpg",
             github: "",
         },
         {
             num: '02',
             title: "Sistema de diálogo",
-            description: "asdassaddd asda dasda adas asd asd",
-            stack: [{name: "React"}, {name: "C++"}, {name: "Particle System"}],
+            description: "Para este proyecto en Unity se desarrolló de una herramienta que permitiese añadir \
+            texto de manera fácil y rápida. Haciendo uso de la interfaz de Unity y al patron de diseño conocido domo 'Observer' \
+            se consiguió generar un objeto que funcionase como gestor de texto, que permite manejar y añadir fácilmente diálogos al juego \
+            y modificar las condiciones que deben cumplirse para que ese texto aparezca.",
+            stack: [{name: "C#"}, {name: "Patrones de diseño"}],
             image: "./myGameEngine/parallaxImage.png",
             github: "",
         },
@@ -176,23 +183,37 @@ const projects = [
         {
             num: '01',
             title: "Validador de modelos y animaciones para importar a Unreal Engine",
-            description: "asdassaddd asda dasda adas asd asd",
+            description: "Durante mi estancia en Pendulo Studios trabajé en herramientas encargadas de comprobar \
+            que los modelos y animaciones provenientes del equipo de arte cumplieran los requisitos necesarios para su correcta \
+            exportación al motor Unreal Engine. Con el desarrollo de plugins internos se consigue validar todo tipo condiciones que deben \
+            cumplir los atributos de los modelos, animaciones y camaras, comprobando que se ajusten a nuestras necesidades. \
+            Gracias al framework Qt dotamos a estas herramientas de apartado gráfico, permitiendo que todo el mundo \
+            pueda entender y usar estas herramientas.",
             stack: [{name: "Qt"}, {name: "Pyside"}, {name: "Maya"}, {name: "Blender"}],
             image: "./myGameEngine/parallaxImage.png",
             github: "",
         },
         {
             num: '02',
-            title: "Servidor para validar nomenclaturas de archivos",
-            description: "asdassaddd asda dasda adas asd asd",
-            stack: [{name: "Redes"}, {name: "Expresiones regulares (regex)"}],
+            title: "Validador de nomenclaturas",
+            description: "En grandes proyectos donde los archivos y las carpetas se cuentan por miles, es importante mantenerlos organizados \
+            y con una nomenclatura clara. Esta herramienta comprueba muy rápidamente y con una respuesta clara los posibles archivos \
+            que no cumplan con la nomenclatura exigida y su ruta. Esta guía de nomenclatura es fácilmente modificable a través de un json, \
+            lo que permite introducir estas reglas, diferenciandolas para cada nivel de subcarpeta e incluso para cada tipo de archivo dentro de estas.",
+            stack: [{name: "Expresiones regulares (regex)"}, {name: "Json"}],
             image: "./myGameEngine/parallaxImage.png",
             github: "",
         },
         {
             num: '03',
             title: "Gestión de Apps a través de Telegram",
-            description: "asdassaddd asda dasda adas asd asd",
+            description: "Herramienta que gestiona todas las aplicaciones que uso en mi vida diaria. Haciendo uso de una Raspberri Pi y un bot de telegram \
+            se ejecuta todo el tiempo un código que recibe e interpreta los mensajes que mandemos a este bot. A través de comandos determinados \
+            se crean, modifican o eliminan tareas en Todoist. En Notion podemos gestionar bases de datos como listas de la compra, gastos o multimedia, \
+            ya que esta herramienta interpreta video, imágen y convierte archivos de voz en texto. También es capaz de crear notas de texto en formato \
+            'Markdown' que usará la base de datos de Obsidian para crear una nueva nota con el estilo y texto que le indiquemos. Por útlimo encender \
+            o apagar un ordenador desde cualquier lugar, muy útil para conexiones a traves de una VPN que también gestiona esta Raspberry Pi. \
+            Esta herramienta puede expandirse a cualquier aplicación que tenga API con python.",
             stack: [{name: "RaspberryPi"}, {name: "Todoist"}, {name: "Notion"}, {name: "Obsidian"}],
             image: "./unity/parallaxImage.jpg",
             github: "",
@@ -200,7 +221,10 @@ const projects = [
         {
             num: '04',
             title: "Launcher para proyectos del motor de videojuegos",
-            description: "asdassaddd asda dasda adas asd asd",
+            description: "Herramienta de gestion de los proyectos y versiones de mi propio motor de videojuegos. Con la ayuda de un archivo json fácilmente editable \
+            el launcher lee toda la carpeta de proyectos con miniaturas incluidas y, gracias a Qt, nos lo muestra todo visualmente. Al crear un nuevo proyecto no solo \
+            actualiza el json si no que también prepara todo el entorno de desarrollo, crea las carpetas y archivos con el código necesario poder trabajar con el motor \
+            nada más se haya abierto, al igual que funcionan otros populares motores como Unreal Engine, Unity o Godot.",
             stack: [{name: "Qt"}, {name: "UI"}],
             image: "./unity/parallaxImage.jpg",
             github: "",
@@ -208,7 +232,6 @@ const projects = [
     ],
 ]
 const projectsName = ["Game Engine", "Unity", "Python"]
-
 
 const tabs = [ "Experiencia", "Estudios", "Habilidades", "Sobre mi"]
 
@@ -221,22 +244,22 @@ const experience = {
         company: "La Tribuna de Toledo",
         position: "Maquetación",
         duration: "June 2018 - September 2018",
-        image: null,
+        image: undefined,
         link: "",
     },
     {
         company: "FIRESCALE Studios",
         position: "VFX & UI designer internship",
         duration: "February 2022 - April 2022",
-        image: "",
-        link: "",
+        image: "./riseOfTheOverlords.jpg",
+        link: "https://store.steampowered.com/app/1162140/Rise_Of_The_Overlords/",
     },
     {
         company: "Pendulo Studios",
         position: "Tools & IT",
         duration: "March 2023 - April 2024",
-        image: "",
-        link: "",
+        image: "./tintin.jpg",
+        link: "https://store.steampowered.com/app/2125090/Tintin_Reporter__Los_Cigarros_del_Faraon/?l=spanish",
     },
     ],
 }

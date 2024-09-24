@@ -25,7 +25,6 @@ const Projects = () => {
     const handleSlideChange = (swiper) => {
 
         const projectSize = projects[currentProject].length
-
    
         setProgress(100 / projectSize * swiper.activeIndex + 100 / projectSize)
         setProject(projects[currentProject][swiper.activeIndex])
@@ -124,13 +123,9 @@ const Projects = () => {
                                 {projects[currentProject].map((project, index)=> {
                                     return (
                                         <SwiperSlide key={index} className="w-full">
-                                            <div className="h-full relative flex justify-center
-                                            items-center bg-pink-50/20">
-                                                <div className="relative flex w-full h-full">
-                                                    <img src={project.image} alt=""
-                                                    className="w-full bg-center bg-cover bg-no-repeat"/>
-                                                </div>
-                                            </div>
+                                                <img src={project.image}
+                                                className="flex justify-center items-center bg-pink-50/20
+                                                    bg-cover bg-center bg-no-repeat" />
                                         </SwiperSlide>
                                     )
                                 })}

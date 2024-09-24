@@ -16,7 +16,7 @@ const ExperienceWork = () => {
                         {experience.items.map((item, index) => {
                             return (
                                 <li key={index}
-                                style={{'--image-url': `url(${item.image})`}}
+                                // style={{'--image-url': `url(${item.image})`}}
                                 className={`bg-[#232329] h-fit xl:h-[220px] py-6 px-10 flex flex-col 
                                 justify-center items-center lg:items-start gap-1 xl:bg-[image:var(--image-url)] bg-bottom xl:bg-right bg-contain bg-no-repeat`}>
                                     <div 
@@ -35,14 +35,17 @@ const ExperienceWork = () => {
                                             </div>
                                         </div>
                                         {
-                                            item.image !== null && 
-                                            <div>
-                                                <img src={item.image} alt=""
-                                                className="w-[300px] xl:w-0 bg-center"/>
-                                                <div className="xl:translate-y-14 -translate-y-12 xl:translate-x-0 translate-x-80 
-                                                w-[50px] h-[50px] rounded-full bg-white/5 flex items-center
+                                            item.image !== undefined && 
+                                            <div className="flex flex-row xl:items-end items-center justify-center max-w-[300px] w-full h-full">
+                                                <div style={{'--image-url': `url(${item.image})`}}
+                                                className="w-[200px] h-[200px] rounded-full translate-x-6
+                                                bg-[image:var(--image-url)] bg-cover bg-no-repeat bg-center" />
+                                                <div className="w-[50px] h-[50px] rounded-full bg-white/5 flex items-center 
+                                                -translate-x-44 translate-y-20 xl:translate-y-2
                                                 justify-center hover:text-accent text-white">
-                                                    <BsSteam className="text-3xl"/>
+                                                    <a href={item.link} target="_blank">
+                                                        <BsSteam className="text-3xl"/>
+                                                    </a>
                                                 </div>
                                             </div>
                                         }

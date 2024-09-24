@@ -32,6 +32,7 @@ const Contact = () => {
 					from_name: form.name,
 					to_name: "Jorge",
 					from_email: form.email,
+					message: form.message,
 					to_email: "jorgetejadolopez@gmail.com",
 				},
 				"HoUaVJll9lhvzBmRn"
@@ -41,7 +42,7 @@ const Contact = () => {
 					setLoading(false);
 					alert("Thank you. I will get back to you as soon as possible.");
 
-					setForm({ name: "", email: ""})
+					setForm({ name: "", email: "", message: ""})
 				},
 				(error) => {
 					setLoading(false);
@@ -77,21 +78,34 @@ const Contact = () => {
 							name="name"
 							value={form.name}
 							onChange={handleChange}
-							placeholder="YOUR NAME..."
+							placeholder="TU NOMBRE..."
 							className="py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none"
 						/>
 					</div>
 				</label>
 
-				<label className='flex flex-col ml-10 translate-x-[15vw] xl:translate-x-[30vw]'>
+				<label className='flex flex-col mb-10 ml-10 translate-x-[15vw] xl:translate-x-[30vw]'>
 					<div className="h-[3rem] w-0.5 bg-white/50">
 						<input
 							type='email'
 							name='email'
 							value={form.email}
 							onChange={handleChange}
-							placeholder="YOUR EMAIL..."
+							placeholder="TU EMAIL..."
 							className='py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none'
+						/>
+					</div>
+				</label>
+
+				<label className="flex flex-col ml-10 translate-x-[15vw] xl:translate-x-[30vw]">
+					<div className="h-[3rem] w-0.5 bg-white/50 ">
+						<input 
+							type="text" 
+							name="message"
+							value={form.message}
+							onChange={handleChange}
+							placeholder="TU MENSAJE..."
+							className="py-4 px-6 placeholder:text-white/50 bg-transparent font-regular outline-none"
 						/>
 					</div>
 				</label>
