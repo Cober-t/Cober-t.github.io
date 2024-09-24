@@ -105,10 +105,13 @@ const Projects = () => {
                                 {/* buttons */}
                                 <div className=" flex items-start gap-4 mb-[20px]">
                                     <Link href={project.github}>
+                                        {
+                                        project.github !== undefined &&
                                         <div className="w-[50px] h-[50px] rounded-full bg-white/5 flex
                                         justify-center items-center hover:text-accent text-white">
                                             <BsGithub className="text-3xl"/>
                                         </div>
+                                        }
                                     </Link>
                                 </div>
                             </div>
@@ -116,7 +119,7 @@ const Projects = () => {
 
                         </div>
 
-                        <div className="w-full xl:w-[50%]">
+                        <div className="w-full xl:w-[50%] mt-10">
                             <Swiper spaceBetween={10} slidesPerView={1} onSlideChange={handleSlideChange}
                             onSwiper={setSwiper} 
                             className="xl:h-[400px]">
@@ -124,9 +127,8 @@ const Projects = () => {
                                     return (
                                         <SwiperSlide key={index} className="w-full">
                                             <div style={{'--image-url': `url(${project.image})`}}
-                                            className={`xl:h-full md:h-[50vh] sm:h-[30vh] h-[25vh] bg-[image:var(--image-url)] bg-center bg-no-repeat
-                                                ${project.image.substring(project.image.length - 4) === ".svg" 
-                                                ? "bg-contain" : "bg-cover"}`}/>
+                                            className={`xl:h-full md:h-[50vh] sm:h-[30vh] h-[25vh] 
+                                                bg-[image:var(--image-url)] bg-center bg-no-repeat bg-contain`}/>
                                         </SwiperSlide>
                                     )
                                 })}

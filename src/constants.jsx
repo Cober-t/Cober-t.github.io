@@ -38,8 +38,8 @@ const projects = [
             existen una serie de características fundamentales que beneficia la creción de cualquier videojuego.\
             A continuación explico el desarrollo de dichas características a través de proyectos terminados.",
             stack: [{name: "C++"}],
-            image: "./myGameEngine/animation/testAnimation.svg",
-            github: "",
+            image: "./myGameEngine/coreCode.png",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '01',
@@ -49,9 +49,9 @@ const projects = [
             diferentes entornos. Es importante también la programación de una capa \
             que permita hacer funcionar la ventana y nuestras interacción con ella \
             a través de nuestros periféricos en cualquier Sistema Operativo.",
-            stack: [{name: "CMake"}, {name: "glfw"}],
+            stack: [{name: "Premake"}, {name: "Cmake"}, {name: "glfw"}],
             image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '02',
@@ -60,8 +60,8 @@ const projects = [
             y poder ver la respuesta de eventos y de nuestras interacciones con el motor. \
             Los mensajes se almacenan y se eliminan de manera eficiente en memoria.",
             stack: [{name: "Debug"}, {name: "spdlog"}],
-            image: "./unity/parallaxImage.jpg",
-            github: "",
+            image: "./myGameEngine/loggingSystem.png",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '03',
@@ -69,8 +69,8 @@ const projects = [
             description: "Un editor visual para el motor supone una drástica mejora, permitiendo \
             la creación de herramientas que aceleran y facilitan el de desarrollo de videjuegos.",
             stack: [{name: "ImGui"}, {name: "Immediate Mode"}],
-            image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            image: "./myGameEngine/editor.png",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '04',
@@ -81,7 +81,7 @@ const projects = [
             El motor usa OpenGL porque funciona en un gran número de plataformas diferentes.",
             stack: [{name: "OpenGL"}],
             image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '05',
@@ -93,7 +93,7 @@ const projects = [
             haciendo que el procesamiento sea muy rápido al evitar repeticiones innecesarias y busquedas en memoria muy largas",
             stack: [{name: "entt"}, {name: "Gestión de memoria"}, {name: "Estructuras de datos"}],
             image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '06',
@@ -104,7 +104,7 @@ const projects = [
             si que facilita enormenente el desarrollo, y es sistema que podemos encontrar en todos los motores populares",
             stack: [{name: "C++"}, {name: "Dll"}, {name: "Scripting Nativo"}],
             image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '07',
@@ -112,8 +112,8 @@ const projects = [
             description: "Al igual que otros populares motores de videojuegos, un launcher visual facilita la interacción \
             con el motor, sus posibles versiones y la creación y edición de proyectos en desarrollo",
             stack: [{name: "Qt"}, {name: "Python"}],
-            image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            image: "./myGameEngine/launcherEngine.png",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '1',
@@ -124,8 +124,8 @@ const projects = [
             ciertos eventos ocurran y un sistema de cámaras que permita modificar facilmente aspectos como la resolución, el zoom, \
             la posición y ángulo de la cámara o la relación de aspecto",
             stack: [{name: "box2d"}, {name: "miniaudio"}, {name: "Cámara virtual"}],
-            image: "./myGameEngine/Pong.png",
-            github: "",
+            image: "./myGameEngine/animation/pong.gif",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '2',
@@ -135,10 +135,10 @@ const projects = [
             imprescindible para la persistencia de datos en un videojuego y para evitar empezar desde una escena vacía \
             en el desarrollo de un proyecto. Otra sustancial mejora que nos permite la serialización de datos es \
             la creción de 'prefabs', entidades completas que podremos guardar \
-            editar, duplicar, siempre atendiendo al uso de memoria y las estructuras de datos.",
+            editar, duplicar, siempre atendiendo al uso de memoria y a las estructuras de datos.",
             stack: [{name: "Texturas y texto"}, {name: "Serialización de datos"}, {name: "Prefabs"}],
-            image: "./myGameEngine/FlappyBird.png",
-            github: "",
+            image: "./myGameEngine/animation/flappyBird.gif",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
             num: '3',
@@ -149,8 +149,8 @@ const projects = [
             y memoria gráfica, lo que nos permite desarrollar herramientas como el sistema de partículas, \
             con el que podremos editar los atributos de las miles de texturas que se van a dibujar",
             stack: [{name: "Atlas de texturas"}, {name: "Sistema de partículas"}, {name: "Flujo jugable"}],
-            image: "./myGameEngine/Breakout.png",
-            github: "",
+            image: "./myGameEngine/animation/breakout.gif",
+            github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
     ],
     [
@@ -165,7 +165,7 @@ const projects = [
             añadir atributos como vida si se tratase de un enemigo, dificultad de terreno para relantizar al jugador, etc. ",
             stack: [{name: "C#"}, {name: "Perlin Noise"}],
             image: "./unity/parallaxImage.jpg",
-            github: "",
+            github: "https://github.com/Cober22/IAIA2",
         },
         {
             num: '02',
@@ -176,7 +176,7 @@ const projects = [
             y modificar las condiciones que deben cumplirse para que ese texto aparezca.",
             stack: [{name: "C#"}, {name: "Patrones de diseño"}],
             image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            github: "https://github.com/Cober22/TrasLaPantalla",
         },
     ],
     [
@@ -191,7 +191,7 @@ const projects = [
             pueda entender y usar estas herramientas.",
             stack: [{name: "Qt"}, {name: "Pyside"}, {name: "Maya"}, {name: "Blender"}],
             image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            github: undefined,
         },
         {
             num: '02',
@@ -202,7 +202,7 @@ const projects = [
             lo que permite introducir estas reglas, diferenciandolas para cada nivel de subcarpeta e incluso para cada tipo de archivo dentro de estas.",
             stack: [{name: "Expresiones regulares (regex)"}, {name: "Json"}],
             image: "./myGameEngine/parallaxImage.png",
-            github: "",
+            github: undefined,
         },
         {
             num: '03',
@@ -215,8 +215,8 @@ const projects = [
             o apagar un ordenador desde cualquier lugar, muy útil para conexiones a traves de una VPN que también gestiona esta Raspberry Pi. \
             Esta herramienta puede expandirse a cualquier aplicación que tenga API con python.",
             stack: [{name: "RaspberryPi"}, {name: "Todoist"}, {name: "Notion"}, {name: "Obsidian"}],
-            image: "./unity/parallaxImage.jpg",
-            github: "",
+            image: "./python/automatizeBot.png",
+            github: "https://github.com/Cober-t/automaticeBotTelegram",
         },
         {
             num: '04',
@@ -226,8 +226,8 @@ const projects = [
             actualiza el json si no que también prepara todo el entorno de desarrollo, crea las carpetas y archivos con el código necesario poder trabajar con el motor \
             nada más se haya abierto, al igual que funcionan otros populares motores como Unreal Engine, Unity o Godot.",
             stack: [{name: "Qt"}, {name: "UI"}],
-            image: "./unity/parallaxImage.jpg",
-            github: "",
+            image: "./myGameEngine/launcherEngine.png",
+            github: "https://github.com/Cober-t/CoberEngineProjects",
         },
     ],
 ]
