@@ -123,9 +123,10 @@ const Projects = () => {
                                 {projects[currentProject].map((project, index)=> {
                                     return (
                                         <SwiperSlide key={index} className="w-full">
-                                                <img src={project.image}
-                                                className="flex justify-center items-center bg-pink-50/20
-                                                    bg-cover bg-center bg-no-repeat" />
+                                            <div style={{'--image-url': `url(${project.image})`}}
+                                            className={`xl:h-full md:h-[50vh] sm:h-[30vh] h-[25vh] bg-[image:var(--image-url)] bg-center bg-no-repeat
+                                                ${project.image.substring(project.image.length - 4) === ".svg" 
+                                                ? "bg-contain" : "bg-cover"}`}/>
                                         </SwiperSlide>
                                     )
                                 })}

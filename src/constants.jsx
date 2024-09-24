@@ -38,7 +38,7 @@ const projects = [
             existen una serie de características fundamentales que beneficia la creción de cualquier videojuego.\
             A continuación explico el desarrollo de dichas características a través de proyectos terminados.",
             stack: [{name: "C++"}],
-            image: "./unity/parallaxImage.jpg",
+            image: "./myGameEngine/animation/testAnimation.svg",
             github: "",
         },
         {

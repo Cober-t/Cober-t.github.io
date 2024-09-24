@@ -16,9 +16,8 @@ const ExperienceWork = () => {
                         {experience.items.map((item, index) => {
                             return (
                                 <li key={index}
-                                // style={{'--image-url': `url(${item.image})`}}
                                 className={`bg-[#232329] h-fit xl:h-[220px] py-6 px-10 flex flex-col 
-                                justify-center items-center lg:items-start gap-1 xl:bg-[image:var(--image-url)] bg-bottom xl:bg-right bg-contain bg-no-repeat`}>
+                                justify-center items-center lg:items-start gap-1 bg-bottom xl:bg-right bg-contain bg-no-repeat`}>
                                     <div 
                                     className="w-full flex xl:flex-row flex-col items-center justify-center sm:justify-between">
                                         <div>
