@@ -29,16 +29,20 @@ const links = [
     }
 ]
 
+import { BsWindowFullscreen  } from "react-icons/bs"
+import { BiConversation } from "react-icons/bi"
+
 const projects = [
     [
         {
             num: '00',
             title: "Core",
-            description: "A la hora de comenzar un proyecto como el de un motor de videojuegos \
+            description: "A la hora de comenzar un proyecto como es el de un motor de videojuegos \
             existen una serie de características fundamentales que beneficia la creción de cualquier videojuego.\
             A continuación explico el desarrollo de dichas características a través de proyectos terminados.",
             stack: [{name: "C++"}],
             image: "./myGameEngine/coreCode.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -50,7 +54,8 @@ const projects = [
             que permita hacer funcionar la ventana y nuestras interacción con ella \
             a través de nuestros periféricos en cualquier Sistema Operativo.",
             stack: [{name: "Premake"}, {name: "Cmake"}, {name: "glfw"}],
-            image: "./myGameEngine/parallaxImage.png",
+            image: undefined,
+            icon: <BsWindowFullscreen className="w-full h-[20vh] md:h-[50vh] xl:h-full" />,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -61,6 +66,7 @@ const projects = [
             Los mensajes se almacenan y se eliminan de manera eficiente en memoria.",
             stack: [{name: "Debug"}, {name: "spdlog"}],
             image: "./myGameEngine/loggingSystem.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -70,6 +76,7 @@ const projects = [
             la creación de herramientas que aceleran y facilitan el de desarrollo de videjuegos.",
             stack: [{name: "ImGui"}, {name: "Immediate Mode"}],
             image: "./myGameEngine/editor.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -80,7 +87,8 @@ const projects = [
             debe estar preparado para que no sea dificil añadir más capacidades gráficas en un futuro. \
             El motor usa OpenGL porque funciona en un gran número de plataformas diferentes.",
             stack: [{name: "OpenGL"}],
-            image: "./myGameEngine/parallaxImage.png",
+            image: "./myGameEngine/graficos.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -92,7 +100,8 @@ const projects = [
             Una escena del juego recorre estos sistermas y a su vez todas las entidades que pertencen a estos, \
             haciendo que el procesamiento sea muy rápido al evitar repeticiones innecesarias y busquedas en memoria muy largas",
             stack: [{name: "entt"}, {name: "Gestión de memoria"}, {name: "Estructuras de datos"}],
-            image: "./myGameEngine/parallaxImage.png",
+            image: "./myGameEngine/sceneAndEntities.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -103,7 +112,8 @@ const projects = [
             cambios y desarrollar el juego mientras el motor está en ejecución. Aunque no es una característica imprescindible \
             si que facilita enormenente el desarrollo, y es sistema que podemos encontrar en todos los motores populares",
             stack: [{name: "C++"}, {name: "Dll"}, {name: "Scripting Nativo"}],
-            image: "./myGameEngine/parallaxImage.png",
+            image: "./myGameEngine/scriptingNativo.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -113,6 +123,7 @@ const projects = [
             con el motor, sus posibles versiones y la creación y edición de proyectos en desarrollo",
             stack: [{name: "Qt"}, {name: "Python"}],
             image: "./myGameEngine/launcherEngine.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -125,6 +136,7 @@ const projects = [
             la posición y ángulo de la cámara o la relación de aspecto",
             stack: [{name: "box2d"}, {name: "miniaudio"}, {name: "Cámara virtual"}],
             image: "./myGameEngine/animation/pong.gif",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -138,6 +150,7 @@ const projects = [
             editar, duplicar, siempre atendiendo al uso de memoria y a las estructuras de datos.",
             stack: [{name: "Texturas y texto"}, {name: "Serialización de datos"}, {name: "Prefabs"}],
             image: "./myGameEngine/animation/flappyBird.gif",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
         {
@@ -150,6 +163,7 @@ const projects = [
             con el que podremos editar los atributos de las miles de texturas que se van a dibujar",
             stack: [{name: "Atlas de texturas"}, {name: "Sistema de partículas"}, {name: "Flujo jugable"}],
             image: "./myGameEngine/animation/breakout.gif",
+            icon: undefined,
             github: "https://github.com/Cober-t/GameEngine/tree/Core",
         },
     ],
@@ -158,13 +172,14 @@ const projects = [
             num: '01',
             title: "Generador de terreno aleatorio",
             description: "Haciendo uso del algoritmo 'Perlin Noise' se desarrolló este generador de terreno para juegos \
-            del tipo RTS (Real-Time Strategy). A través de la interfáz de Unity se pueden modificar todas las variables \
+            del tipo RTS (Real-Time Strategy). A través de la interfaz de Unity se pueden modificar todas las variables \
             de este algoritmo y generar un terreno con un solo click pudiendo ver el resultado rápidamente en tiempo real. \
             También se pretendía que, una vez generado este terreno, fuese totalmente personalizable, tanto en el arte como en \
             cuanto a la lógica del videojuego, pudiendo añadir tipos de terreno, asignar imagenes a estos o incluso \
             añadir atributos como vida si se tratase de un enemigo, dificultad de terreno para relantizar al jugador, etc. ",
             stack: [{name: "C#"}, {name: "Perlin Noise"}],
-            image: "./unity/parallaxImage.jpg",
+            image: "./unity/iaia2.gif",
+            icon: undefined,
             github: "https://github.com/Cober22/IAIA2",
         },
         {
@@ -173,9 +188,10 @@ const projects = [
             description: "Para este proyecto en Unity se desarrolló de una herramienta que permitiese añadir \
             texto de manera fácil y rápida. Haciendo uso de la interfaz de Unity y al patron de diseño conocido domo 'Observer' \
             se consiguió generar un objeto que funcionase como gestor de texto, que permite manejar y añadir fácilmente diálogos al juego \
-            y modificar las condiciones que deben cumplirse para que ese texto aparezca.",
+            y modificar las condiciones que deben cumplirse para que el texto aparezca.",
             stack: [{name: "C#"}, {name: "Patrones de diseño"}],
-            image: "./myGameEngine/parallaxImage.png",
+            image: undefined,
+            icon: <BiConversation className="w-full h-[20vh] md:h-[50vh] xl:h-full"/>,
             github: "https://github.com/Cober22/TrasLaPantalla",
         },
     ],
@@ -188,9 +204,12 @@ const projects = [
             exportación al motor Unreal Engine. Con el desarrollo de plugins internos se consigue validar todo tipo condiciones que deben \
             cumplir los atributos de los modelos, animaciones y camaras, comprobando que se ajusten a nuestras necesidades. \
             Gracias al framework Qt dotamos a estas herramientas de apartado gráfico, permitiendo que todo el mundo \
-            pueda entender y usar estas herramientas.",
-            stack: [{name: "Qt"}, {name: "Pyside"}, {name: "Maya"}, {name: "Blender"}],
-            image: "./myGameEngine/parallaxImage.png",
+            pueda entender y usar estas herramientas.\n\
+            Debido a restricciones del contrato de confidencialdiad, el proyecto no se aloja en un repositorio público y la imagen solo es \
+            un ejemplo del proyecto.",
+            stack: [{name: "Qt"}, {name: "Pyside"}, {name: "MEL"}, {name: "Maya"}, {name: "Blender"}],
+            image: "./python/maya.png",
+            icon: undefined,
             github: undefined,
         },
         {
@@ -201,7 +220,8 @@ const projects = [
             que no cumplan con la nomenclatura exigida y su ruta. Esta guía de nomenclatura es fácilmente modificable a través de un json, \
             lo que permite introducir estas reglas, diferenciandolas para cada nivel de subcarpeta e incluso para cada tipo de archivo dentro de estas.",
             stack: [{name: "Expresiones regulares (regex)"}, {name: "Json"}],
-            image: "./myGameEngine/parallaxImage.png",
+            image: "./python/validadorNomenclaturas.png",
+            icon: undefined,
             github: undefined,
         },
         {
@@ -212,10 +232,10 @@ const projects = [
             se crean, modifican o eliminan tareas en Todoist. En Notion podemos gestionar bases de datos como listas de la compra, gastos o multimedia, \
             ya que esta herramienta interpreta video, imágen y convierte archivos de voz en texto. También es capaz de crear notas de texto en formato \
             'Markdown' que usará la base de datos de Obsidian para crear una nueva nota con el estilo y texto que le indiquemos. Por útlimo encender \
-            o apagar un ordenador desde cualquier lugar, muy útil para conexiones a traves de una VPN que también gestiona esta Raspberry Pi. \
-            Esta herramienta puede expandirse a cualquier aplicación que tenga API con python.",
+            o apagar un ordenador desde cualquier lugar, muy útil para conexiones a traves de una VPN que también gestiona esta Raspberry Pi.",
             stack: [{name: "RaspberryPi"}, {name: "Todoist"}, {name: "Notion"}, {name: "Obsidian"}],
             image: "./python/automatizeBot.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/automaticeBotTelegram",
         },
         {
@@ -227,6 +247,7 @@ const projects = [
             nada más se haya abierto, al igual que funcionan otros populares motores como Unreal Engine, Unity o Godot.",
             stack: [{name: "Qt"}, {name: "UI"}],
             image: "./myGameEngine/launcherEngine.png",
+            icon: undefined,
             github: "https://github.com/Cober-t/CoberEngineProjects",
         },
     ],
@@ -295,6 +316,7 @@ import { SiAndroidstudio, SiAutodeskmaya, SiCsharp, SiCplusplus, SiDotnet,
 import { DiIllustrator, DiJavascript, DiPhotoshop } from "react-icons/di"
 import { BiLogoBlender } from "react-icons/bi"
 
+
 const skills = {
     icon: "",
     title: "Mis Habilidades",
@@ -330,7 +352,7 @@ const skills = {
         {
             icon: <FaReact />,
             name: "React Native",
-            level: "Advanced",
+            level: "Avanzado",
         },
         {
             icon: <SiQt />,

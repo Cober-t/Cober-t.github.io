@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { tabs } from "../../constants.jsx"
 
-import Skills from "../Experience/ExperienceWorks.jsx"
+import Skills from "../Experience/Skills.jsx"
 import AboutMe from "../Experience/AboutMe.jsx"
 import ExperienceWork from "../Experience/ExperienceWorks.jsx"
 import Education from "../Experience/Education.jsx"
@@ -38,14 +38,15 @@ const Experience = () => {
 
                     {/* content */}
                     <div className="min-h-[70vh] w-full">
-                        
-                        { currentTab === 0 && <ExperienceWork /> }
+                        { 
+                        currentTab === 0 && <ExperienceWork /> ||
 
-                        { currentTab === 1 && <Education /> }
+                        currentTab === 1 && <Education /> ||
 
-                        { currentTab === 2 && <Skills /> }
+                        currentTab === 2 && <Skills /> ||
 
-                        { currentTab === 3 && <AboutMe /> }
+                        currentTab === 3 && <AboutMe />
+                        }
                     </div>
                 </div>
 

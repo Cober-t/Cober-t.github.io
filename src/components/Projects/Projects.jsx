@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import MotionTranstion from "../MotionTransition.jsx"
 
 import { useEffect, useState } from "react"
-import { BsGithub } from "react-icons/bs"
+import { BsGithub, BsSteam } from "react-icons/bs"
 import ProjectSlideButtons from "./ProjectSlideButtons.jsx"
 import { Link } from "react-router-dom"
 import "swiper/css"
@@ -87,7 +87,8 @@ const Projects = () => {
                                     {project.title}
                                 </h2>
                                 {/* project description */}
-                                <p className="text-white/60 font-semibold text-left font-nodeDescription">
+                                <p className="text-white/60 font-semibold text-left font-nodeDescription
+                                whitespace-pre-line">
                                     {project.description}
                                 </p>
                                 {/* stack */}
@@ -115,8 +116,6 @@ const Projects = () => {
                                     </Link>
                                 </div>
                             </div>
-
-
                         </div>
 
                         <div className="w-full xl:w-[50%] mt-10">
@@ -126,9 +125,13 @@ const Projects = () => {
                                 {projects[currentProject].map((project, index)=> {
                                     return (
                                         <SwiperSlide key={index} className="w-full">
-                                            <div style={{'--image-url': `url(${project.image})`}}
-                                            className={`xl:h-full md:h-[50vh] sm:h-[30vh] h-[25vh] 
-                                                bg-[image:var(--image-url)] bg-center bg-no-repeat bg-contain`}/>
+                                            { project.image !== undefined &&
+                                                <div style={{'--image-url': `url(${project.image})`}}
+                                                className={`xl:h-full md:h-[50vh] sm:h-[30vh] h-[25vh] 
+                                                    bg-[image:var(--image-url)] bg-center bg-no-repeat bg-contain`}/>
+                                                ||
+                                                project.icon
+                                            }
                                         </SwiperSlide>
                                     )
                                 })}
@@ -140,7 +143,6 @@ const Projects = () => {
                                 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                                 />
                             </Swiper>
-
                             <motion.div 
                             key={progress}
                             initial={{width: `${lastProgressValue}%`}}

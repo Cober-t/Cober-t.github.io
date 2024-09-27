@@ -1,13 +1,17 @@
 import { downloadCV } from "../constants";
 import { Link } from "react-router-dom";
 
+
 const Hero = () => {
+
   return (
     <div className="container mx-auto h-full">
       <div className={`relative w-full flex flex-col xl:flex-row 
       items-center justify-center xl:pt-8 xl:pb-24 xl:mt-10 gap-x-[10vw] select-none`}>
         
-          <img src="" alt="" className="bg-accent w-[30vh] h-[30vh] xl:w-[45vh] xl:h-[45vh] mb-8 rounded-full"/>
+          <div style={{'--image-url': `url("./profilePic.png")`}}
+          className="w-[30vh] h-[30vh] xl:w-[45vh] xl:h-[45vh] mb-8 rounded-full translate-x-6
+          bg-[image:var(--image-url)] bg-cover bg-no-repeat bg-center"/>
 
           <div className="items-center flex flex-col justify-center text-center xl:text-left xl:pr-[100px]">
             {/* <span className="text-[28px] xl:text-[36px]">Desarrollador de software y programador de gráficos</span> */}

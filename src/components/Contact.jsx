@@ -59,7 +59,7 @@ const Contact = () => {
 		<div className={`${styles.paddingX} ${styles.paddingY} flex flex-col w-full h-full overflow-hidden mt-24`}>
 
 			<h3 className={`text-6xl hover:text-accent xl:text-8xl font-tags flex flex-col items-center`}>
-				CONTACT ME
+				CONTACTAME
 			</h3>
 			<p className="flex text-accent justify-center  mb-10 font-medium text-md">
 				jorgetejadolopez@gmail.com

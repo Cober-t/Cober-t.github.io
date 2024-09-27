@@ -1,5 +1,5 @@
 import { skills } from "../../constants.jsx"
-import ProjectSlideButtons from "./ProjectSlideButtons.jsx"
+import ProjectSlideButtons from "../Projects/ProjectSlideButtons.jsx"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 
@@ -8,12 +8,6 @@ const Skills = () => {
     return (
         <div className="w-full h-full">
         <div className="flex flex-col gap-[20px]">
-            {/* <div className="flex flex-col gap-[30px] text-center xl:text-left mb-8">
-                <h3 className="text-5xl font-bold font-nodeTitle uppercase">{skills.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 font-medium">
-                    {skills.description}
-                </p>
-            </div> */}
 
             <p className="font-title hover:text-accent transition-all
             flex text-4xl font-medium uppercase justify-center select-none">
@@ -67,12 +61,12 @@ const Skills = () => {
                     </div>
                     </SwiperSlide>
                 })}
-                <ProjectSlideButtons containerStyles="flex gap-2 absolute right-0 
+                {/* <ProjectSlideButtons containerStyles="flex gap-2 absolute right-0 
                 bottom-[calc(50%_-_22px)] z-20 w-full justify-between -translate-y-5"
                 projectSize={5}
                 btnStyles="hover:bg-accent text-primary
                 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-                />
+                /> */}
             </Swiper>
 
             <p className="font-title hover:text-accent transition-all
